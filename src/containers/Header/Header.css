@@ -1,0 +1,18 @@
+.left-rectangle { position: absolute; left: 0; top: 0; height: 80vh; width: auto; overflow: hidden; }
+.left-rectangle img { height: 100%; width: auto }
+.right-rectangle { position: absolute; right: 0; bottom: 0; height: 30vh; width: auto; overflow: hidden; }
+.right-rectangle img { height: 100%; width: auto }
+
+.header .top-nav { padding-top: 60px; height: 76px; display: flex; justify-content: space-between; align-items: center }
+.header .top-nav .logo-side { height: inherit; width: auto }
+.header .top-nav .logo-side img { height: inherit; width: auto }
+.header .header-body { position: relative; padding-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end }
+.header .header-body > div { display: flex; flex: 1 }
+.header .header-body .mockup { padding-right: 16%; z-index: 9999; height: 70vh; width: auto; }
+.header .header-body .mockup img { height: 100%; width: auto; }
+.header .header-body .counter { display: flex; flex-direction: column; align-items: flex-end }
+.header .header-body .counter .stay-toned h1 { white-space: nowrap; color: #7BDC68; font-size: 4.5em; font-family: 'Hacen Tunisia'; font-weight: bold; margin-bottom: 8px; }
+.header .header-body .counter .counter-boxes { display: grid; grid-template-columns: repeat(2, 1fr); direction: ltr; column-gap: 26px; row-gap: 26px; }
+.header .header-body .counter .counter-boxes .counter-box { height: 140px; width: 140px; background: #FFF; border-radius: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, .1); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.header .header-body .counter .counter-boxes .counter-box span { line-height: 1.5; font-family: 'Hacen Tunisia'; font-size: 1.6em; font-weight: 200; color: #14ACE3; }
+.header .header-body .counter .counter-boxes .counter-box span.type { color: #787878 }

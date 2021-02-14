@@ -1,5 +1,18 @@
+// Assets
+
+// Components
+
+// Containers
+import Header from '../src/containers/Header/Header'
+
 export default function ComingSoon() {
+
   return (
-    <h1>Sile Website</h1>
+      <div className={'page-container coming-soon'}>
+        <div className={'content-container'}>
+            <Header isComingSoon={true} />
+        </div>
+      </div>
   )
+
 }
