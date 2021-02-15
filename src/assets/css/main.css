@@ -8,14 +8,21 @@
     font-family: 'Hacen Tunisia';
     font-style: normal;
     font-weight: 200;
-    src: local('hacen-tunisia'), url('../fonts/hacen-tunisia.ttf') format('truetype');
+    src: local('Hacen Tunisia Regular'), url('../fonts/hacen-tunisia-regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Hacen Tunisia';
     font-style: normal;
     font-weight: bold;
-    src: local('hacen-tunisia'), url('../fonts/hacen-tunisia-bold.ttf') format('truetype');
+    src: local('Hacen Tunisia'), url('../fonts/hacen-tunisia-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Hacen Tunisia Lt';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Hacen Tunisia Lt'), url('../fonts/hacen-tunisia-lt-regular.ttf') format('truetype');
 }
 
 
@@ -27,8 +34,21 @@
 
 body { margin: 0; padding: 0 }
 div { direction: rtl }
-h1, h2, h3, h4, h5, h6 { margin: 0 }
+h1, h2, h3, h4, h5, h6, p, span { margin: 0 }
+ul { list-style: none; margin: 0; padding: 0;}
+
+::placeholder { color: #C7C7C7; opacity: 1; }
+:-ms-input-placeholder { color: #C7C7C7; }
+::-ms-input-placeholder { color: #C7C7C7 }
+
+.clear { clear: both; }
 
 .page-container { position: relative; width: 100vw; overflow: hidden; }
 .page-container.coming-soon { height: 100vh }
 .page-container .content-container { padding: 0 80px; z-index: 9999 }
+
+section { width: 100%; margin-bottom: 80px; }
+section .section-title h1 { white-space: nowrap; color: #7BDC68; font-size: 3.6em; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: center; margin-bottom: 60px; }
+section .section-title h1.without-margin { margin-bottom: 0 }
+section .section-title p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 20px; text-align: center; font-weight: 400; margin-bottom: 60px; }
+section .section-content { width: 100%; }
