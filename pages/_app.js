@@ -11,6 +11,7 @@ import '../src/containers/Partners/Partners.css'
 import '../src/containers/Footer/Footer.css'
 
 import '../src/components/Button/Button.css'
+import '../src/components/Card/NewsCard/NewsCard.css'
 
 export default function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />

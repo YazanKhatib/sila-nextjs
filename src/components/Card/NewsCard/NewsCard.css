@@ -1,0 +1,10 @@
+.news-item { cursor: pointer; background: #FFF; border-radius: 24px; box-shadow: 0 0 10px rgba(0, 0, 0, .1); display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; }
+.news-item .thumbnail-container { position: relative; width: 100%; max-height: 200px; overflow: hidden; }
+.news-item .thumbnail-container .overlay { transition: all .3s ease-in-out; opacity: 0; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: linear-gradient(180deg, rgba(101, 209, 219, .28), rgba(0, 173, 238, .77)) }
+.news-item .thumbnail-container img { transition: all .3s ease-in-out; transform: scale(1.1); width: 100%; height: auto; }
+.news-item .item-content { padding: 30px 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.news-item .item-content .date { color: #C7C7C7; font-family: 'Hacen Tunisia'; font-weight: 200; text-align: center; font-size: 16px; margin-bottom: 10px; }
+.news-item .item-content h2 { color: #787878; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: center; font-size: 27px; margin-bottom: 10px; }
+.news-item .item-content p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: center; font-weight: 400; }
+.news-item:hover .thumbnail-container .overlay { opacity: 1 }
+.news-item:hover .thumbnail-container img { transform: scale(1); }
