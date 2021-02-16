@@ -10,7 +10,7 @@ import News from "../src/containers/News/News";
 import Partners from '../src/containers/Partners/Partners.js'
 import Footer from '../src/containers/Footer/Footer'
 
-export default function ComingSoon() {
+export default function Home() {
 
   return (
       <div className={'page-container'}>

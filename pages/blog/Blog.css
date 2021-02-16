@@ -1,0 +1,14 @@
+.page-container .content-container .news-section { margin-bottom: 0 }
+.page-container .content-container .news-section .news { direction: rtl; margin-bottom: 60px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; column-gap: 26px; row-gap: 26px; }
+.page-container .content-container .news-section .pagination { margin-bottom: 80px; width: 100%; }
+.page-container .content-container .news-section .pagination .inner-container { display: flex; justify-content: center; }
+.page-container .content-container .news-section .pagination .inner-container ul { display: flex; justify-content: center; align-items: center; }
+.page-container .content-container .news-section .pagination .inner-container ul li { transition: all .3s ease-in-out; cursor: pointer; margin-right: 10px; height: 40px; width: 40px; background: transparent; border-radius: 100px; display: flex; justify-content: center; align-items: center; }
+.page-container .content-container .news-section .pagination .inner-container ul li span { transition: all .3s ease-in-out; font-family: 'Hacen Tunisia Lt'; color: #343434; font-size: 18px; text-align: center; font-weight: 400; }
+.page-container .content-container .news-section .pagination .inner-container ul li:last-of-type { margin-right: 0; }
+.page-container .content-container .news-section .pagination .inner-container ul li.active { background: #05A5E1; color: #FFF; }
+.page-container .content-container .news-section .pagination .inner-container ul li.active span { color: #FFF; }
+.page-container .content-container .news-section .pagination .inner-container ul li:not(.prev, .next):hover { background: #05A5E1; }
+.page-container .content-container .news-section .pagination .inner-container ul li:hover span { color: #FFF; }
+.page-container .content-container .news-section .pagination .inner-container ul li img { width: 40%; height: auto }
+.page-container .content-container .news-section .pagination .inner-container ul li.prev img { transform: rotate(180deg) }

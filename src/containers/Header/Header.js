@@ -69,7 +69,7 @@ export function Header(props) {
                         <li><span>متخصصي الرعاية</span></li>
                         <li><span>لك ولعائلتك</span></li>
                         <li><span>تعرف علينا</span></li>
-                        <li><span>الأخبار</span></li>
+                        <li><Link href={'/blog'}><span>الأخبار</span></Link></li>
 
                     </ul>
                 </div>}
@@ -128,11 +128,11 @@ export function StickyHeader(props) {
 
                 <div className={'menu-side'}>
                     <ul className={'menu'}>
-                        <li className={'active'}><span>الصفحة الرئيسية</span></li>
+                        <li><Link href={'/'}><span>الصفحة الرئيسية</span></Link></li>
                         <li><span>متخصصي الرعاية</span></li>
                         <li><span>لك ولعائلتك</span></li>
                         <li><span>تعرف علينا</span></li>
-                        <li><span>الأخبار</span></li>
+                        <li className={'active'}><span>الأخبار</span></li>
 
                     </ul>
                 </div>

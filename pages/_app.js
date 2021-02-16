@@ -3,6 +3,8 @@ import '../src/assets/css/main.css'
 import '../src/assets/css/grid-system.css'
 import '../src/assets/css/ionicons.min.css'
 
+import '../pages/blog/Blog.css'
+
 import '../src/containers/Header/Header.css'
 import '../src/containers/Features/Features.css'
 import '../src/containers/Goals/Goals.css'

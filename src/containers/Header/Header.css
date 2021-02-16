@@ -12,7 +12,7 @@
 .header .top-nav .menu-side .menu li { cursor: pointer; margin-left: 20px }
 .header .top-nav .menu-side .menu li:last-of-type { margin-left: 0 }
 .header .top-nav .menu-side .menu li span { text-shadow: 0 0 2px rgba(0, 0, 0, .2); z-index: 99; position: relative; color: #FFF; font-family: 'Hacen Tunisia Lt'; font-size: 20px; }
-.header .top-nav .menu-side .menu li.active span::before { content: ''; z-index: -1; border-top-left-radius: 100px; border-bottom-left-radius: 100px; transition: all .3s ease-in-out; position: absolute; height: 100%; width: 30%; background: #7BDC68; right: 10%; }
+.header .top-nav .menu-side .menu li.active span::before { content: ''; z-index: -1; border-top-left-radius: 100px; border-bottom-left-radius: 100px; transition: all .3s ease-in-out; position: absolute; height: 100%; width: 20px; background: #7BDC68; right: 10%; }
 .header .top-nav .menu-side .menu li.active:hover span::before { width: calc(90% + 10px); }
 
 .header .header-body { position: relative; padding-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end }
