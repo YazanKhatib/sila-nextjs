@@ -3,7 +3,7 @@
 // Components
 
 // Containers
-import Header from '../src/containers/Header/Header'
+import {Header} from '../src/containers/Header/Header'
 import Features from '../src/containers/Features/Features'
 import Goals from "../src/containers/Goals/Goals";
 import News from "../src/containers/News/News";
@@ -26,7 +26,7 @@ export default function ComingSoon() {
             <Partners />
         </div>
 
-          <Footer />
+        <Footer />
       </div>
   )
 

@@ -43,7 +43,7 @@ ul { list-style: none; margin: 0; padding: 0;}
 
 .clear { clear: both; }
 
-.page-container { position: relative; width: 100vw; overflow: hidden; }
+.page-container { position: relative; width: 100%; overflow: hidden; }
 .page-container.coming-soon { height: 100vh }
 .page-container .content-container { padding: 0 80px; z-index: 9999 }
 

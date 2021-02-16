@@ -12,8 +12,9 @@ import mockup from '../../assets/svg/mobile_moukup.svg'
 import play from '../../assets/svg/play.svg'
 import market_2 from "../../assets/images/markets/market_2.png";
 import market_1 from "../../assets/images/markets/market_1.png";
+import background_blog from '../../assets/images/background/background_blog.jpg'
 
-export default function Header(props) {
+export function Header(props) {
 
     const [launchAt, setLaunchAt] = useState({
         days: 0,
@@ -108,6 +109,51 @@ export default function Header(props) {
                     <div className={'markets'}>
                         <img src={market_2} alt=""/>
                         <img src={market_1} alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+
+}
+
+export function StickyHeader(props) {
+
+    return (
+        <div className={'header sticky-header'}>
+            <div className={'top-nav'}>
+                <div className={'logo-side'}>
+                    <img src={logo} alt=""/>
+                </div>
+
+                <div className={'menu-side'}>
+                    <ul className={'menu'}>
+                        <li className={'active'}><span>الصفحة الرئيسية</span></li>
+                        <li><span>متخصصي الرعاية</span></li>
+                        <li><span>لك ولعائلتك</span></li>
+                        <li><span>تعرف علينا</span></li>
+                        <li><span>الأخبار</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div className={'header-body'}>
+                <div style={{ background: `url(${background_blog}) no-repeat`, backgroundPosition: 'center center', backgroundSize: 'cover'}} className={'title-breadcrumbs-container'}>
+                    <div className={'outer-container'}>
+                        <div className={'content-container'}>
+                            <div className={'title'}>
+                                <h1>{props.title}</h1>
+                            </div>
+
+                            <div className={'breadcrumbs'}>
+                                <ul>
+                                    {props.breadcrumbs.map((item, index) => {
+                                        return <li key={index}><span>{item.title}</span> {props.breadcrumbs.length > (index+1)? <span className={'sep'}>/</span>:<></> }</li>
+                                    })}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
