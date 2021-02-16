@@ -1,4 +1,5 @@
 // React Basic
+import { useRouter } from 'next/router'
 
 // Assets
 import news_1 from '../../../assets/images/news/news_1.jpg'
@@ -8,8 +9,10 @@ import Button from "../../Button/Button";
 
 export default function NewsCard(props) {
 
+    const router = useRouter();
+
     return (
-        <div className={'news-item'}>
+        <div className={'news-item'} onClick={() => {router.push('/blog/1')}}>
             <div className={'thumbnail-container'}>
                 <img src={news_1} alt=""/>
 

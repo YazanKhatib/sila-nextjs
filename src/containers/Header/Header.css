@@ -12,7 +12,7 @@
 .header .top-nav .menu-side .menu li { cursor: pointer; margin-left: 20px }
 .header .top-nav .menu-side .menu li:last-of-type { margin-left: 0 }
 .header .top-nav .menu-side .menu li span { text-shadow: 0 0 2px rgba(0, 0, 0, .2); z-index: 99; position: relative; color: #FFF; font-family: 'Hacen Tunisia Lt'; font-size: 20px; }
-.header .top-nav .menu-side .menu li.active span::before { content: ''; z-index: -1; border-top-left-radius: 100px; border-bottom-left-radius: 100px; transition: all .3s ease-in-out; position: absolute; height: 100%; width: 20px; background: #7BDC68; right: 10%; }
+.header .top-nav .menu-side .menu li.active span::before { content: ''; z-index: -1; border-top-left-radius: 100px; border-bottom-left-radius: 100px; transition: all .3s ease-in-out; position: absolute; height: 100%; width: 26px; background: #7BDC68; right: 10%; }
 .header .top-nav .menu-side .menu li.active:hover span::before { width: calc(90% + 10px); }
 
 .header .header-body { position: relative; padding-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end }
@@ -30,16 +30,15 @@
 .header .header-body .counter .counter-boxes .counter-box span.type { color: #787878 }
 
 .header .header-body .welcome-message { flex: 1; display: flex; flex-direction: column; align-items: flex-start }
-.header .header-body .welcome-message h1 { white-space: nowrap; color: #7BDC68; line-height: 1.2; font-size: 4.5em; font-family: 'Hacen Tunisia'; font-weight: bold; }
+.header .header-body .welcome-message h1 { white-space: nowrap; color: #7BDC68; line-height: 1.2; font-size: 56px; font-family: 'Hacen Tunisia'; font-weight: bold; }
 .header .header-body .welcome-message p { font-family: 'Hacen Tunisia Lt'; color: #343434; font-size: 18px; }
 .header .header-body .welcome-message .header-button { cursor: pointer; margin-top: 30px; align-self: center; background: #05A5E1; width: fit-content; border-radius: 100px; display: flex; flex-direction: row-reverse; justify-content: center; align-items: center; }
 .header .header-body .welcome-message .header-button .icon-container { background: #00ADEE; width: 50px; height: 50px; border-radius: 100px; display: flex; justify-content: center; align-items: center; }
 .header .header-body .welcome-message .header-button .icon-container img { width: 40%; height: auto; transform: translateX(14%); }
-.header .header-body .welcome-message .header-button span { padding: 0 16px; font-family: 'Hacen Tunisia Lt'; color: #FFF; }
+.header .header-body .welcome-message .header-button span { padding: 0 16px; font-family: 'Hacen Tunisia Lt'; color: #FFF; font-size: 16px; }
 
 /* Sticky header */
-.sticky-header .top-nav { right: 0; left: 0; top: 0; background: #FFF; box-shadow: 0 4px 10px rgba(0, 0, 0, .1); border-bottom-left-radius: 80px; border-bottom-right-radius: 80px; padding: 30px 80px 10px; width: -webkit-fill-available; position: fixed; z-index: 9999; }
-.sticky-header .top-nav {  }
+.sticky-header .top-nav { z-index: 999999999; right: 0; left: 0; top: 0; background: #FFF; box-shadow: 0 4px 10px rgba(0, 0, 0, .1); border-bottom-left-radius: 80px; border-bottom-right-radius: 80px; padding: 30px 80px 10px; width: -webkit-fill-available; position: fixed; }
 .sticky-header .top-nav .logo-side img { height: 60px; width: auto; }
 .sticky-header .top-nav .menu-side .menu li { margin-left: 30px }
 .sticky-header .top-nav .menu-side .menu li span { color: #14ACE3; text-shadow: 0 0 2px rgba(0, 0, 0, .15); }
@@ -51,7 +50,7 @@
 .sticky-header .header-body .title-breadcrumbs-container { overflow: hidden; width: 100%; height: 360px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px }
 .sticky-header .header-body .title-breadcrumbs-container .outer-container { display: flex; justify-content: center; align-items: center; height: calc(100% - 100px); width: 100%; background: linear-gradient(180deg, rgba(101, 209, 219, .28), rgba(0, 173, 238, .77)); padding-top: 100px; }
 .sticky-header .header-body .title-breadcrumbs-container .outer-container .content-container { width: 100%; display: flex; justify-content: space-between;align-items: center; }
-.sticky-header .header-body .title-breadcrumbs-container .outer-container .content-container .title h1 { color: #FFF; font-size: 3.6em; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
+.sticky-header .header-body .title-breadcrumbs-container .outer-container .content-container .title h1 { margin-left: 30px; color: #FFF; font-size: 44px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
 .sticky-header .header-body .title-breadcrumbs-container .outer-container .content-container .breadcrumbs ul { display: flex; align-items: center }
 .sticky-header .header-body .title-breadcrumbs-container .outer-container .content-container .breadcrumbs ul li span { cursor: pointer; font-family: 'Hacen Tunisia Lt'; color: #FFF; font-size: 18px; text-align: center; }
 .sticky-header .header-body .title-breadcrumbs-container .outer-container .content-container .breadcrumbs ul li .sep { margin: 0 2px; }
