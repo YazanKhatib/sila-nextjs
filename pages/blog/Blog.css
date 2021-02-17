@@ -31,8 +31,7 @@
 .page-container .content-container .news-single .widgets .widget .widget-title h5 { color: #7BDC68; font-size: 30px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item { display: grid; grid-template-columns: 120px calc(100% - 120px); grid-template-rows: auto; grid-column-gap: 12px; cursor: pointer; margin-bottom: 17px; border-bottom: 1px solid #EEE; padding-bottom: 17px; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item:last-of-type { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
-.page-container .content-container .news-single .widgets .widget .widget-body .news .item .thumbnail-container { width: 100%; height: 80px; border-radius: 10px; overflow: hidden; }
-.page-container .content-container .news-single .widgets .widget .widget-body .news .item .thumbnail-container img { max-height: 100%; }
+.page-container .content-container .news-single .widgets .widget .widget-body .news .item .thumbnail-container { background-position: center center; background-size: cover; background-repeat: no-repeat; width: 100%; height: 80px; border-radius: 10px; overflow: hidden; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item .meta-data h6 { color: #787878; font-size: 16px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item .meta-data span { color: #C7C7C7; font-family: 'Hacen Tunisia'; font-weight: 200; text-align: center; font-size: 14px; margin-bottom: 10px; }
 

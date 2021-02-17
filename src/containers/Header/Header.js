@@ -1,4 +1,6 @@
+// React Basic
 import React, {useEffect, useState} from 'react'
+import { useRouter } from 'next/router'
 
 // React Basic
 import Link from "next/link";
@@ -23,21 +25,21 @@ export function Header(props) {
         seconds: 0
     })
 
-    useEffect(() => {
-        setTimeout(() => {
-            const   launchDate = new Date('Feb 18, 2021 16:30:00').getTime(),
-                    currentData = new Date().getTime();
-
-            let distance = launchDate - currentData;
-
-            setLaunchAt({
-                days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                seconds: Math.floor((distance % (1000 * 60)) / 1000),
-            })
-        }, 1000)
-    })
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         const   launchDate = new Date('Feb 18, 2021 16:30:00').getTime(),
+    //                 currentData = new Date().getTime();
+    //
+    //         let distance = launchDate - currentData;
+    //
+    //         setLaunchAt({
+    //             days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+    //             hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    //             minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+    //             seconds: Math.floor((distance % (1000 * 60)) / 1000),
+    //         })
+    //     }, 1000)
+    // })
 
     const renderCounterBox = (type, duration) => {
         return <div className={'counter-box'}>
@@ -59,7 +61,7 @@ export function Header(props) {
             </div>}
 
             <div className={'top-nav'}>
-                <div className={'logo-side'}>
+                <div className={'logo-side'} onClick={() => {router.push('/')}}>
                     <img src={logo} alt=""/>
                 </div>
 
@@ -119,10 +121,12 @@ export function Header(props) {
 
 export function StickyHeader(props) {
 
+    const router = useRouter();
+
     return (
         <div className={'header sticky-header'}>
             <div className={'top-nav'}>
-                <div className={'logo-side'}>
+                <div className={'logo-side'} onClick={() => {router.push('/')}}>
                     <img src={logo} alt=""/>
                 </div>
 

@@ -1,4 +1,5 @@
 // React Basic
+import { useRouter } from 'next/router'
 
 // Assets
 import logo_white_theme from "../../assets/svg/logo/vertical_logo_dark_theme.png";
@@ -9,13 +10,15 @@ import market_2 from "../../assets/images/markets/market_2.png";
 
 export default function Footer() {
 
+    const router = useRouter();
+
     return (
         <footer>
             <div className={'top-side'}>
                 <div className={'row'}>
                     <div className={'col-lg-3'}>
                         <div className={'logo-side'}>
-                            <img src={logo_white_theme} alt=""/>
+                            <img src={logo_white_theme} alt="" onClick={() => {router.push('/')}}/>
                             <p>صلة اتجاه جديد في الرعاية الصحية لك ولعائلتك
                                 كن على ثقة بنا وحمل تطبيق صلة الان</p>
                             <div className={'markets'}>

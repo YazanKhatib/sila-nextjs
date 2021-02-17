@@ -13,8 +13,10 @@ export default function NewsCard(props) {
 
     return (
         <div className={'news-item'} onClick={() => {router.push('/blog/1')}}>
-            <div className={'thumbnail-container'}>
-                <img src={news_1} alt=""/>
+            <div className={'thumbnail-outer-container'}>
+                <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${news_1})` }} />
+
+                <img className={'hidden-image'} src={news_1} title="" alt=""/>
 
                 <div className={'overlay'} />
             </div>

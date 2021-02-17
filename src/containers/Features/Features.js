@@ -6,6 +6,7 @@ import feature_2 from "../../assets/images/features/feature_2.jpg";
 
 // Components
 import Button from "../../components/Button/Button";
+import news_1 from "../../assets/images/news/news_1.jpg";
 
 export default function Features() {
 
@@ -18,8 +19,10 @@ export default function Features() {
             <div className={'section-content'}>
                 <div className={'features'}>
                     <div className={'feature'}>
-                        <div className={'feature-thumbnail'}>
-                            <img src={feature_1} alt=""/>
+                        <div className={'thumbnail-outer-container'}>
+                            <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${feature_1})` }} />
+
+                            <img className={'hidden-image'} src={feature_1} title="" alt=""/>
 
                             <div className={'overlay'} />
                         </div>
@@ -31,8 +34,10 @@ export default function Features() {
                     </div>
 
                     <div className={'feature'}>
-                        <div className={'feature-thumbnail'}>
-                            <img src={feature_2} alt=""/>
+                        <div className={'thumbnail-outer-container'}>
+                            <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${feature_2})` }} />
+
+                            <img className={'hidden-image'} src={feature_2} title="" alt=""/>
 
                             <div className={'overlay'} />
                         </div>

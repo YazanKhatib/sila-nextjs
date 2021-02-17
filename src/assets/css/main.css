@@ -44,6 +44,8 @@ div { font-size: 0 }
 
 .clear { clear: both; }
 
+.hidden-image { display: none }
+
 .page-container { position: relative; width: 100%; overflow: hidden; }
 .page-container.coming-soon { height: 100vh }
 .page-container .content-container { padding: 0 80px; z-index: 9999 }

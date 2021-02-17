@@ -28,7 +28,7 @@ export default function NewsSingle() {
                 <div className={'news-single'}>
                     <div className={'content'}>
                         <div className={'img-container'}>
-                            <img src={news_1} alt=""/>
+                            <img src={news_1} title="" alt=""/>
                         </div>
 
                         <h1 className={'title'}>التأقلم مع احتياجات مريضك للرعاية الصحية</h1>
@@ -61,8 +61,8 @@ export default function NewsSingle() {
                             <div className={'widget-body'}>
                                 <div className={'news'}>
                                     <div className={'item'}>
-                                        <div className={'thumbnail-container'}>
-                                            <img src={news_1} alt=""/>
+                                        <div className={'thumbnail-container'} style={{ backgroundImage: `url(${news_1})` }}>
+                                            <img className={'hidden-image'} src={news_1} title="" alt=""/>
                                         </div>
 
                                         <div className={'meta-data'}>
@@ -72,8 +72,8 @@ export default function NewsSingle() {
                                     </div>
 
                                     <div className={'item'}>
-                                        <div className={'thumbnail-container'}>
-                                            <img src={news_1} alt=""/>
+                                        <div className={'thumbnail-container'} style={{ backgroundImage: `url(${news_1})` }}>
+                                            <img className={'hidden-image'} src={news_1} alt=""/>
                                         </div>
 
                                         <div className={'meta-data'}>
@@ -83,8 +83,8 @@ export default function NewsSingle() {
                                     </div>
 
                                     <div className={'item'}>
-                                        <div className={'thumbnail-container'}>
-                                            <img src={news_1} alt=""/>
+                                        <div className={'thumbnail-container'} style={{ backgroundImage: `url(${news_1})` }}>
+                                            <img className={'hidden-image'} src={news_1} alt=""/>
                                         </div>
 
                                         <div className={'meta-data'}>
