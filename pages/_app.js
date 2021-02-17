@@ -1,6 +1,5 @@
 // Stylesheet
 import '../src/assets/css/main.css'
-import '../src/assets/css/grid-system.css'
 import '../src/assets/css/ionicons.min.css'
 
 import '../pages/blog/Blog.css'
