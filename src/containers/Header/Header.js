@@ -70,7 +70,7 @@ export function Header(props) {
                         <li className={'active'}><span>الصفحة الرئيسية</span></li>
                         <li><span>متخصصي الرعاية</span></li>
                         <li><span>لك ولعائلتك</span></li>
-                        <li><span>تعرف علينا</span></li>
+                        <li><Link href={'/about_us'}><span>تعرف علينا</span></Link></li>
                         <li><Link href={'/blog'}><span>الأخبار</span></Link></li>
 
                     </ul>
@@ -135,7 +135,7 @@ export function StickyHeader(props) {
                         <li><Link href={'/'}><span>الصفحة الرئيسية</span></Link></li>
                         <li><span>متخصصي الرعاية</span></li>
                         <li><span>لك ولعائلتك</span></li>
-                        <li><span>تعرف علينا</span></li>
+                        <li><Link href={'/about_us'}><span>تعرف علينا</span></Link></li>
                         <li className={'active'}><span>الأخبار</span></li>
 
                     </ul>

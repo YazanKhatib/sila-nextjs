@@ -2,11 +2,11 @@
 import arrow from '../../src/assets/svg/arrow.svg'
 
 // Components
+import NewsCard from "../../src/components/Card/NewsCard/NewsCard";
 
 // Containers
 import {StickyHeader} from '../../src/containers/Header/Header'
 import Footer from '../../src/containers/Footer/Footer'
-import NewsCard from "../../src/components/Card/NewsCard/NewsCard";
 
 export default function Blog() {
 
