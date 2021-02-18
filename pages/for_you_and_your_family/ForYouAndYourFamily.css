@@ -1,0 +1,5 @@
+.page-container .content-container .questions .items ul { direction: rtl; }
+.page-container .content-container .questions .items ul li { display: flex; margin-bottom: 14px; }
+.page-container .content-container .questions .items ul li:last-of-type { margin-bottom: 0 }
+.page-container .content-container .questions .items ul li .dot { margin-top: 5px; height: 12px; width: 12px; background: #05A5E1; border-radius: 100px; margin-left: 18px; }
+.page-container .content-container .questions .items ul li p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: right; font-weight: 200; }

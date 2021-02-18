@@ -14,7 +14,7 @@ import category_5 from '../../src/assets/images/categories/5.jpg'
 import {StickyHeader} from '../../src/containers/Header/Header'
 import Footer from '../../src/containers/Footer/Footer'
 
-export default function HealthCareProfessionals() {
+export default function ForYouAndYourFamily() {
 
     const [activeQuestion, setActiveQuestion] = useState('');
 
@@ -24,47 +24,21 @@ export default function HealthCareProfessionals() {
             onPress: () => {}
         },
         {
-            title: 'متخصصي الرعاية',
+            title: 'لك ولعائلتك',
             onPress: () => {}
         }
     ]
 
-    const questions = [
-        {
-            title: '1كيف يمكنني أن أصبح طبيباً معتمداً من قبل شبكة صلة؟',
-            description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
-            lists: [
-                {
-                    title: '1كيف يمكنني أن أصبح طبيباً معتمداً من قبل شبكة صلة؟',
-                    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
-                },
-                {
-                    title: '1كيف يمكنني أن أصبح طبيباً معتمداً من قبل شبكة صلة؟',
-                    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
-                },
-
-            ]
-        },
-        {
-            title: '2كيف يمكنني أن أصبح طبيباً معتمداً من قبل شبكة صلة؟',
-            description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
-            lists: [
-                {
-                    title: '1كيف يمكنني أن أصبح طبيباً معتمداً من قبل شبكة صلة؟',
-                    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
-                },
-                {
-                    title: '1كيف يمكنني أن أصبح طبيباً معتمداً من قبل شبكة صلة؟',
-                    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
-                },
-
-            ]
-        },
+    const lists = [
+        'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
+        'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
+        'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
+        'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص',
     ]
 
     return (
         <div className={'page-container'}>
-            <StickyHeader breadcrumbs={breadcrumbs} title={'لمتخصصي الرعاية'} />
+            <StickyHeader breadcrumbs={breadcrumbs} title={'لك ولعائلتك'} />
 
             <div className={'content-container'}>
                 <section className={'categories'}>
@@ -126,28 +100,12 @@ export default function HealthCareProfessionals() {
 
                 <section className={'questions'}>
                     <h1>الطبيب</h1>
-
                     <div className={'items'}>
-                        {questions.map((item, index) => {
-                            return <div key={index} className={'item'}>
-                                <div className={'item-title'} onClick={() => {setActiveQuestion(item.title == activeQuestion? '':item.title);}}>
-                                    <h6>{item.title}</h6>
-
-                                    <div className={'icon-container ' + (activeQuestion == item.title? 'active':'')}>
-                                        <i className={'ion-plus-round'} aria-hidden="true" />
-                                    </div>
-                                </div>
-
-                                <div className={'item-description ' + (activeQuestion == item.title? 'active':'')}>
-                                    <p>{item.description}</p>
-                                    <ul>
-                                        {item.lists.map((item, index) => {
-                                            return <li key={index}><div className={'dot'} /><div><h6>{item.title}</h6><p>{item.description}</p></div></li>
-                                        })}
-                                    </ul>
-                                </div>
-                            </div>;
-                        })}
+                        <ul>
+                            {lists.map((item, index) => {
+                                return <li key={index}><div className={'dot'} /><p>{item}</p></li>
+                            })}
+                        </ul>
                     </div>
                 </section>
             </div>
