@@ -38,7 +38,7 @@ export default function ForYouAndYourFamily() {
 
     return (
         <div className={'page-container'}>
-            <StickyHeader breadcrumbs={breadcrumbs} title={'لك ولعائلتك'} />
+            <StickyHeader activeItem={'for_you_and_your_family'} breadcrumbs={breadcrumbs} title={'لك ولعائلتك'} />
 
             <div className={'content-container'}>
                 <section className={'categories'}>

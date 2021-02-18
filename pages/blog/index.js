@@ -23,7 +23,7 @@ export default function Blog() {
 
     return (
         <div className={'page-container'}>
-            <StickyHeader breadcrumbs={breadcrumbs} title={'الأخبار'} />
+            <StickyHeader activeItem={'blog'} breadcrumbs={breadcrumbs} title={'الأخبار'} />
 
             <div className={'content-container'}>
                 <section className={'news-section'} >

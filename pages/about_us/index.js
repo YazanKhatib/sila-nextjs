@@ -60,7 +60,7 @@ export default function Blog() {
 
     return (
         <div className={'page-container'}>
-            <StickyHeader breadcrumbs={breadcrumbs} title={'تعرف علينا'} />
+            <StickyHeader activeItem={'about_us'} breadcrumbs={breadcrumbs} title={'تعرف علينا'} />
 
             <div className={'content-container'}>
                 <section className={'about-us'}>

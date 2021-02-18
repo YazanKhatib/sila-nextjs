@@ -64,7 +64,7 @@ export default function HealthCareProfessionals() {
 
     return (
         <div className={'page-container'}>
-            <StickyHeader breadcrumbs={breadcrumbs} title={'لمتخصصي الرعاية'} />
+            <StickyHeader activeItem={'health_care'} breadcrumbs={breadcrumbs} title={'لمتخصصي الرعاية'} />
 
             <div className={'content-container'}>
                 <section className={'categories'}>

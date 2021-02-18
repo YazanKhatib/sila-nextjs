@@ -22,7 +22,7 @@ export default function NewsSingle() {
 
     return (
         <div className={'page-container'}>
-            <StickyHeader breadcrumbs={breadcrumbs} title={'التأقلم مع احتياجات مريضك للرعاية الصحية'} />
+            <StickyHeader activeItem={'blog'} breadcrumbs={breadcrumbs} title={'التأقلم مع احتياجات مريضك للرعاية الصحية'} />
 
             <div className={'content-container'}>
                 <div className={'news-single'}>

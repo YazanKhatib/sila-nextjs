@@ -68,8 +68,8 @@ export function Header(props) {
                 {!props.isComingSoon && <div className={'menu-side'}>
                     <ul className={'menu'}>
                         <li className={'active'}><span>الصفحة الرئيسية</span></li>
-                        <li><span>متخصصي الرعاية</span></li>
-                        <li><span>لك ولعائلتك</span></li>
+                        <li><Link href={'/health_care_professionals'}><span>متخصصي الرعاية</span></Link></li>
+                        <li><Link href={'/for_you_and_your_family'}><span>لك ولعائلتك</span></Link></li>
                         <li><Link href={'/about_us'}><span>تعرف علينا</span></Link></li>
                         <li><Link href={'/blog'}><span>الأخبار</span></Link></li>
 
@@ -133,11 +133,10 @@ export function StickyHeader(props) {
                 <div className={'menu-side'}>
                     <ul className={'menu'}>
                         <li><Link href={'/'}><span>الصفحة الرئيسية</span></Link></li>
-                        <li><span>متخصصي الرعاية</span></li>
-                        <li><span>لك ولعائلتك</span></li>
-                        <li><Link href={'/about_us'}><span>تعرف علينا</span></Link></li>
-                        <li className={'active'}><span>الأخبار</span></li>
-
+                        <li className={props.activeItem == 'health_care'? 'active':''}><Link href={'/health_care_professionals'}><span>متخصصي الرعاية</span></Link></li>
+                        <li className={props.activeItem == 'for_you_and_your_family'? 'active':''}><Link href={'/for_you_and_your_family'}><span>لك ولعائلتك</span></Link></li>
+                        <li className={props.activeItem == 'about_us'? 'active':''}><Link href={'/about_us'}><span>تعرف علينا</span></Link></li>
+                        <li className={props.activeItem == 'blog'? 'active':''}><Link href={'/blog'}><span>الأخبار</span></Link></li>
                     </ul>
                 </div>
             </div>
