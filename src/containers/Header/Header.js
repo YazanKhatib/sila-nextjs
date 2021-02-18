@@ -9,6 +9,7 @@ import Link from "next/link";
 import leftRectangle from '../../assets/svg/background/left_rectangle.svg'
 import rightRectangle from '../../assets/svg/background/right_rectangle.svg'
 import rightRectangleHome from '../../assets/svg/background/right_rectangle_home.svg'
+import right_image from '../../assets/images/background/home_right.jpg'
 import logo from '../../assets/svg/logo/vertical_logo_light_theme.png'
 import mockup from '../../assets/svg/mobile_moukup.svg'
 import play from '../../assets/svg/play.svg'
@@ -54,10 +55,18 @@ export function Header(props) {
                 <img src={leftRectangle} alt=""/>
             </div>
 
+            <svg className="clip-path">
+                <clipPath id="right-rectangle-clip-path" clipPathUnits="objectBoundingBox">
+                    <path d="M1,0 l-0.945,0.488 c-0.076,0.043,-0.078,0.114,0.027,0.16 l0.918,0.352 V0"></path>
+                </clipPath>
+            </svg>
+
             {props.isComingSoon? <div className={'right-rectangle'}>
                 <img src={rightRectangle} alt=""/>
             </div> : <div className={'right-rectangle home-page'}>
-                <img src={rightRectangleHome} alt=""/>
+                <div className="clip" style={{ backgroundImage: `url(${right_image})` }}>
+                    <div className="overlay" />
+                </div>
             </div>}
 
             <div className={'top-nav'}>

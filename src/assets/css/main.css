@@ -46,6 +46,8 @@ div { font-size: 0 }
 
 .hidden-image { display: none }
 
+.clip-path { position: absolute; width: 0; height: 0; }
+
 .page-container { position: relative; width: 100%; overflow: hidden; }
 .page-container.coming-soon { height: 100vh }
 .page-container .content-container { padding: 0 80px; z-index: 9999 }
