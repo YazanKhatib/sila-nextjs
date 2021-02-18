@@ -128,10 +128,8 @@ export default function Blog() {
                         <div className={'members'}>
                             <div className={'item'}>
                                 <div className={'thumbnail-outer-container'}>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_3})` }} />
-
                                     <img className={'hidden-image'} src={member_3} title="" alt=""/>
-
+                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_3})` }} />
                                     <div className={'overlay'} />
                                 </div>
 
@@ -143,10 +141,8 @@ export default function Blog() {
 
                             <div className={'item'}>
                                 <div className={'thumbnail-outer-container'}>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_2})` }} />
-
                                     <img className={'hidden-image'} src={member_2} title="" alt=""/>
-
+                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_2})` }} />
                                     <div className={'overlay'} />
                                 </div>
 
@@ -158,10 +154,8 @@ export default function Blog() {
 
                             <div className={'item'}>
                                 <div className={'thumbnail-outer-container'}>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_1})` }} />
-
                                     <img className={'hidden-image'} src={member_1} title="" alt=""/>
-
+                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_1})` }} />
                                     <div className={'overlay'} />
                                 </div>
 

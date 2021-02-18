@@ -4,6 +4,7 @@ import '../src/assets/css/ionicons.min.css'
 
 import '../pages/blog/Blog.css'
 import '../pages/about_us/AboutUs.css'
+import '../pages/health_care_professionals/HealthCareProfessionals.css'
 
 import '../src/containers/Header/Header.css'
 import '../src/containers/Features/Features.css'
