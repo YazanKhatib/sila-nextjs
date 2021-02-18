@@ -1,14 +1,12 @@
 // React Basic
 import React, {useEffect, useState} from 'react'
 import { useRouter } from 'next/router'
-
-// React Basic
 import Link from "next/link";
 
 // Assets
 import leftRectangle from '../../assets/svg/background/left_rectangle.svg'
 import rightRectangle from '../../assets/svg/background/right_rectangle.svg'
-import rightRectangleHome from '../../assets/svg/background/right_rectangle_home.svg'
+// import rightRectangleHome from '../../assets/svg/background/right_rectangle_home.svg'
 import right_image from '../../assets/images/background/home_right.jpg'
 import logo from '../../assets/svg/logo/vertical_logo_light_theme.png'
 import mockup from '../../assets/svg/mobile_moukup.svg'
