@@ -1,4 +1,5 @@
 // React Basic
+import React, {useState} from 'react'
 import { useRouter } from 'next/router'
 
 // Assets
@@ -8,13 +9,45 @@ import market_2 from "../../assets/images/markets/market_2.png";
 
 // Components
 
+// Lang
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+
+    const { i18n, t } = useTranslation();
 
     const router = useRouter();
 
+    const [languageModalShow, setLanguageModalShow] = useState(false);
+    const [languageModalActive, setLanguageModalActive] = useState(false);
+
+    const languages = [
+        {key: 'ar', value: 'العربية'},
+        {key: 'en', value: 'English'},
+    ];
+
+    const openLanguageModal = () => {
+        setLanguageModalShow(!languageModalShow)
+        setTimeout(() => {
+            setLanguageModalActive(!languageModalActive)
+        }, 1)
+    }
+
+    const closeLanguageModal = () => {
+        setLanguageModalActive(!languageModalActive)
+        setTimeout(() => {
+            setLanguageModalShow(!languageModalShow)
+        }, 200)
+    }
+
+    const setLanguage = (key) => {
+        i18n.changeLanguage(key);
+        localStorage.setItem('lang', key);
+    }
+
     return (
         <footer>
-            <div className={'top-side'}>
+            <div className={'top-side ' + (i18n.language === 'ar'? 'rtl':'')}>
                 <div className={'logo-side'}>
                     <img src={logo_white_theme} alt="" onClick={() => {router.push('/')}}/>
                     <p>صلة اتجاه جديد في الرعاية الصحية لك ولعائلتك
@@ -27,7 +60,7 @@ export default function Footer() {
 
                 <div className={'contact-info-side'}>
                     <div className={'content'}>
-                        <h5 className={'content-title'}>معلومات التواصل</h5>
+                        <h5 className={'content-title'}>{t('public.footer.contact_info')}</h5>
 
                         <div className={'contact-info'}>
                             <ul>
@@ -38,7 +71,7 @@ export default function Footer() {
                         </div>
 
                         <div className={'stay-toned'}>
-                            <h5>ابقى على اطلاع</h5>
+                            <h5>{t('public.footer.stay_toned')}</h5>
 
                             <div className={'social-icons'}>
                                 <ul>
@@ -55,27 +88,39 @@ export default function Footer() {
                 </div>
 
                 <div className={'contact-us-side'}>
-                    <h5>تواصل معنا</h5>
+                    <h5>{t('public.footer.contact_us')}</h5>
 
                     <form action="">
-                        <input type="text" name={'email'} id={'email'} placeholder={'البريد الالكتروني'}/>
-                        <textarea name="message" id="message" rows="4" placeholder={'اترك لنا تعليقك'}></textarea>
-                        <button onClick={(e) => { e.preventDefault() }}>إرسال</button>
+                        <input type="text" name={'email'} id={'email'} placeholder={t('public.footer.email')}/>
+                        <textarea name="message" id="message" rows="4" placeholder={t('public.footer.message')} />
+                        <button onClick={(e) => { e.preventDefault() }}>{t('public.footer.send')}</button>
                     </form>
                 </div>
             </div>
 
-            <div className={'bottom-side'}>
+            <div className={'bottom-side ' + (i18n.language === 'ar'? 'rtl':'')}>
                 <div className={'copy-right'}>
                     <span>جميع الحقوق محفوظة لشبكة صلة الطبية 2021</span>
                 </div>
 
                 <div className={'lang-privacy-common-questions'}>
-                    <span>الأسئلة الشائعة</span>
-                    <span>سياسة الخصوصية</span>
-                    <span>العربية</span>
+                    <span>{t('public.footer.faq')}</span>
+                    <span>{t('public.footer.privacy_policy')}</span>
+                    <span onClick={openLanguageModal}>{i18n.language === 'ar'? 'العربية':'English'}</span>
                 </div>
             </div>
+
+            { languageModalShow && <div className={'languages-modal ' + (languageModalActive? 'active':'')} onClick={closeLanguageModal}>
+                <div className="model-inner-container" onClick={closeLanguageModal}>
+                    <ul>
+                        {
+                            languages.map((item, index) => {
+                                return <li key={index} className={item.key === i18n.language? 'active':''} onClick={() => { setLanguage(item.key); closeLanguageModal() }}>{item.value}</li>
+                            })
+                        }
+                    </ul>
+                </div>
+            </div> }
         </footer>
     )
 

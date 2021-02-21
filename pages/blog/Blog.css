@@ -1,5 +1,5 @@
 .page-container .content-container .news-section { margin-bottom: 0 }
-.page-container .content-container .news-section .news { direction: rtl; margin-bottom: 60px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; column-gap: 26px; row-gap: 26px; }
+.page-container .content-container .news-section .news { margin-bottom: 60px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; column-gap: 26px; row-gap: 26px; }
 .page-container .content-container .news-section .pagination { margin-bottom: 80px; width: 100%; }
 .page-container .content-container .news-section .pagination .inner-container { display: flex; justify-content: center; }
 .page-container .content-container .news-section .pagination .inner-container ul { display: flex; justify-content: center; align-items: center; }
@@ -11,30 +11,41 @@
 .page-container .content-container .news-section .pagination .inner-container ul li:not(.prev, .next):hover { background: #05A5E1; }
 .page-container .content-container .news-section .pagination .inner-container ul li:hover span { color: #FFF; }
 .page-container .content-container .news-section .pagination .inner-container ul li img { width: 40%; height: auto }
-.page-container .content-container .news-section .pagination .inner-container ul li.prev img { transform: rotate(180deg) }
+.page-container .content-container .news-section .pagination .inner-container ul li.next img { transform: rotate(180deg) }
+.page-container.rtl .content-container .news-section .news { direction: rtl }
+.page-container.rtl .content-container .news-section .pagination .inner-container ul { direction: rtl }
+.page-container.rtl .content-container .news-section .pagination .inner-container ul li.next img { transform: rotate(0) }
+.page-container.rtl .content-container .news-section .pagination .inner-container ul li.prev img { transform: rotate(180deg) }
 
 
 /* News Single */
 .page-container .content-container .news-single { margin-bottom: 80px; display: grid; grid-template-columns: 75% 25%; grid-template-rows: auto; column-gap: 30px; }
 .page-container .content-container .news-single .content .img-container { margin-bottom: 30px; width: 100%; height: auto; overflow: hidden; border-radius: 20px; }
 .page-container .content-container .news-single .content .img-container img { width: inherit; height: inherit }
-.page-container .content-container .news-single .content h1 { font-size: 44px; margin-bottom: 20px; color: #05A5E1; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
-.page-container .content-container .news-single .content p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 20px; text-align: right; font-weight: 400; }
+.page-container .content-container .news-single .content h1 { font-size: 44px; margin-bottom: 20px; color: #05A5E1; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: left; }
+.page-container .content-container .news-single .content p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 20px; text-align: left; font-weight: 400; }
 .page-container .content-container .news-single .content .share-buttons { display: flex; align-items: center; justify-content: center; margin-top: 30px; }
-.page-container .content-container .news-single .content .share-buttons .share-button { cursor: pointer; margin-left: 20px; background: #05A5E1; border-radius: 100px; width: 105px; height: 55px; display: flex; justify-content: center; align-items: center; }
+.page-container .content-container .news-single .content .share-buttons .share-button { cursor: pointer; margin-right: 20px; background: #05A5E1; border-radius: 100px; width: 105px; height: 55px; display: flex; justify-content: center; align-items: center; }
 .page-container .content-container .news-single .content .share-buttons .share-button:last-of-type { margin-left: 0; }
 .page-container .content-container .news-single .content .share-buttons .share-button i { color: #FFF; font-size: 28px; }
+.page-container.rtl .content-container .news-single { direction: rtl }
+.page-container.rtl .content-container .news-single .content h1 { text-align: right; }
+.page-container.rtl .content-container .news-single .content p { text-align: right; }
+.page-container.rtl .content-container .news-single .content .share-buttons .share-button { margin-left: 20px; margin-right: 0 }
+.page-container.rtl .content-container .news-single .content .share-buttons .share-button:last-of-type { margin-left: 0; margin-right: 0 }
 
 .page-container .content-container .news-single .widgets {}
 .page-container .content-container .news-single .widgets .widget { margin-bottom: 34px }
 .page-container .content-container .news-single .widgets .widget .widget-title { margin-bottom: 16px }
-.page-container .content-container .news-single .widgets .widget .widget-title h5 { color: #7BDC68; font-size: 30px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
+.page-container .content-container .news-single .widgets .widget .widget-title h5 { color: #7BDC68; font-size: 30px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: left; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item { display: grid; grid-template-columns: 120px calc(100% - 120px); grid-template-rows: auto; grid-column-gap: 12px; cursor: pointer; margin-bottom: 17px; border-bottom: 1px solid #EEE; padding-bottom: 17px; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item:last-of-type { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item .thumbnail-container { background-position: center center; background-size: cover; background-repeat: no-repeat; width: 100%; height: 80px; border-radius: 10px; overflow: hidden; }
-.page-container .content-container .news-single .widgets .widget .widget-body .news .item .meta-data h6 { color: #787878; font-size: 16px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
+.page-container .content-container .news-single .widgets .widget .widget-body .news .item .meta-data h6 { color: #787878; font-size: 16px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: left; }
 .page-container .content-container .news-single .widgets .widget .widget-body .news .item .meta-data span { color: #C7C7C7; font-family: 'Hacen Tunisia'; font-weight: 200; text-align: center; font-size: 14px; margin-bottom: 10px; }
-
 .page-container .content-container .news-single .widgets .widget .widget-body .tags { display: flex; flex-wrap: wrap; }
-.page-container .content-container .news-single .widgets .widget .widget-body .tags .item { margin-left: 10px; margin-bottom: 10px; background: #F9F9F9; padding: 8px 30px; border-radius: 25px; white-space: nowrap; width: fit-content; }
+.page-container .content-container .news-single .widgets .widget .widget-body .tags .item { margin-right: 10px; margin-bottom: 10px; background: #F9F9F9; padding: 8px 30px; border-radius: 25px; white-space: nowrap; width: fit-content; }
 .page-container .content-container .news-single .widgets .widget .widget-body .tags .item span { color: #535252; font-size: 17px; font-family: 'Hacen Tunisia Lt'; }
+.page-container.rtl .content-container .news-single .widgets .widget .widget-title h5 { text-align: right; }
+.page-container.rtl .content-container .news-single .widgets .widget .widget-body .news .item .meta-data h6 { text-align: right; }
+.page-container.rtl .content-container .news-single .widgets .widget .widget-body .tags .item { margin-left: 10px; margin-right: 0 }

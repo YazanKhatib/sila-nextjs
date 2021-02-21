@@ -1,0 +1,26 @@
+{
+  "public": {
+    "menu": {
+      "home": "الصفحة الرئيسية",
+      "health_care_professionals": "متخصصي الرعاية",
+      "for_you_and_your_family": "لك ولعائلتك",
+      "about_us": "تعرف علينا",
+      "blog": "الأخبار"
+    },
+    "footer": {
+      "privacy_policy": "سياسة الخصوصية",
+      "faq": "الأسئلة الشائعة",
+      "copy_rights": "جميع الحقوق محفوظة لشبكة صلة الطبية 2021",
+      "contact_us": "تواصل معنا",
+      "contact_info": "معلومات التواصل",
+      "stay_toned": "ابقى على اطلاع",
+      "email": "البريد الالكتروني",
+      "message": "اترك لنا تعليقك",
+      "send": "إرسال"
+    }
+  },
+  "dashboard": {
+
+  }
+}
+

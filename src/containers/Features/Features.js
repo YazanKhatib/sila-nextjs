@@ -6,7 +6,6 @@ import feature_2 from "../../assets/images/features/feature_2.jpg";
 
 // Components
 import Button from "../../components/Button/Button";
-import news_1 from "../../assets/images/news/news_1.jpg";
 
 export default function Features() {
 

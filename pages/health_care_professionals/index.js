@@ -14,7 +14,12 @@ import category_5 from '../../src/assets/images/categories/5.jpg'
 import {StickyHeader} from '../../src/containers/Header/Header'
 import Footer from '../../src/containers/Footer/Footer'
 
+// Lang
+import {useTranslation} from "react-i18next";
+
 export default function HealthCareProfessionals() {
+
+    const { i18n, t } = useTranslation();
 
     const [activeQuestion, setActiveQuestion] = useState('');
 
@@ -63,7 +68,7 @@ export default function HealthCareProfessionals() {
     ]
 
     return (
-        <div className={'page-container'}>
+        <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
             <StickyHeader activeItem={'health_care'} breadcrumbs={breadcrumbs} title={'لمتخصصي الرعاية'} />
 
             <div className={'content-container'}>
