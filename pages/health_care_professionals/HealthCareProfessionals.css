@@ -1,6 +1,6 @@
 .page-container .content-container .categories { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-row-gap: 40px; }
 .page-container .content-container .categories .item { cursor: pointer; position: relative; padding: 0 50px; }
-.page-container .content-container .categories .item::after { content: ''; width: 1.5px; background: rgba(157, 157, 157, .22); height: 80%; position: absolute; top: 10%; left: 0 }
+.page-container .content-container .categories .item::after { content: ''; width: 1.5px; background: rgba(157, 157, 157, .22); height: 80%; position: absolute; top: 10%; right: 0 }
 .page-container .content-container .categories .item:nth-of-type(3n+3)::after { display: none }
 .page-container .content-container .categories .item:last-of-type::after { display: none }
 .page-container .content-container .categories .item .thumbnail-outer-container { position: relative; height: 150px; overflow: hidden; border-radius: 20px; z-index: 1; }
@@ -10,21 +10,29 @@
 .page-container .content-container .categories .item .thumbnail-outer-container .title-container h1 { text-shadow: 0 0 2px rgba(0, 0, 0, .15); color: #FFF; font-size: 40px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: center; }
 .page-container .content-container .categories .item:hover .thumbnail-outer-container .overlay { opacity: 1 }
 .page-container .content-container .categories .item:hover .thumbnail-outer-container .thumbnail-inner-container { transform: scale(1); }
+.page-container.rtl .content-container .categories .item::after { right: 0; left: unset }
 
 .page-container .content-container .questions {}
-.page-container .content-container .questions h1 { color: #7BDC68; font-size: 52px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; margin-bottom: 20px; }
+.page-container .content-container .questions h1 { color: #7BDC68; font-size: 52px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: left; margin-bottom: 20px; }
 .page-container .content-container .questions .items .item { height:auto; overflow:hidden; background: #EFEEEE; margin-bottom: 20px; border-radius: 14px; }
 .page-container .content-container .questions .items .item .item-title { background: #F5F5F5; border-radius: 14px; cursor: pointer; display: flex; justify-content: space-between; padding: 18px 24px; align-items: center; }
-.page-container .content-container .questions .items .item .item-title h6 { font-family: 'Hacen Tunisia'; color: #535252; font-size: 20px; text-align: right; font-weight: 200; margin-left: 20px; }
+.page-container .content-container .questions .items .item .item-title h6 { font-family: 'Hacen Tunisia'; color: #535252; font-size: 20px; text-align: left; font-weight: 200; margin-right: 20px; }
 .page-container .content-container .questions .items .item .item-title .icon-container { transition: all.3s ease-in-out; }
 .page-container .content-container .questions .items .item .item-title .icon-container.active { transform: rotate(45deg) }
 .page-container .content-container .questions .items .item .item-title .icon-container i { color: #00ADEE; font-size: 24px; }
 .page-container .content-container .questions .items .item .item-description { overflow: hidden; padding: 0px 24px; padding-bottom: 0; transition: all.3s ease-in-out; height: 0; transform: scaleY(0); transform-origin: top; }
 .page-container .content-container .questions .items .item .item-description.active { transform: scaleY(1); height: auto; padding: 18px 24px; padding-bottom: 30px; }
-.page-container .content-container .questions .items .item .item-description > p { margin-bottom: 20px; font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: right; font-weight: 200; }
-.page-container .content-container .questions .items .item .item-description ul { direction: rtl; }
+.page-container .content-container .questions .items .item .item-description > p { margin-bottom: 20px; font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: left; font-weight: 200; }
 .page-container .content-container .questions .items .item .item-description ul li { display: flex; margin-bottom: 14px; }
 .page-container .content-container .questions .items .item .item-description ul li:last-of-type { margin-bottom: 0 }
-.page-container .content-container .questions .items .item .item-description ul li .dot { margin-top: 5px; height: 12px; width: 12px; background: #05A5E1; border-radius: 100px; margin-left: 18px; }
-.page-container .content-container .questions .items .item .item-description ul li h6 { margin-bottom: 4px; font-family: 'Hacen Tunisia'; color: #535252; font-size: 17px; text-align: right; font-weight: 600; }
-.page-container .content-container .questions .items .item .item-description ul li p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 16px; text-align: right; font-weight: 200; }
+.page-container .content-container .questions .items .item .item-description ul li .dot { margin-top: 5px; height: 12px; width: 12px; background: #05A5E1; border-radius: 100px; margin-right: 18px; }
+.page-container .content-container .questions .items .item .item-description ul li h6 { margin-bottom: 4px; font-family: 'Hacen Tunisia'; color: #535252; font-size: 17px; text-align: left; font-weight: 600; }
+.page-container .content-container .questions .items .item .item-description ul li p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 16px; text-align: left; font-weight: 200; }
+.page-container.rtl .content-container .questions h1 { text-align: right; }
+.page-container.rtl .content-container .questions .items .item .item-title { flex-direction: row-reverse }
+.page-container.rtl .content-container .questions .items .item .item-title h6 { text-align: right; margin-left: 20px; margin-right: 0 }
+.page-container.rtl .content-container .questions .items .item .item-description > p { text-align: right; }
+.page-container.rtl .content-container .questions .items .item .item-description ul { direction: rtl; }
+.page-container.rtl .content-container .questions .items .item .item-description ul li h6 { text-align: right; }
+.page-container.rtl .content-container .questions .items .item .item-description ul li .dot { margin-left: 18px; margin-right: 0 }
+.page-container.rtl .content-container .questions .items .item .item-description ul li p { text-align: right; }

@@ -1,0 +1,25 @@
+{
+  "public": {
+    "menu": {
+      "home": "Home Page",
+      "health_care_professionals": "For Health Professionals",
+      "for_you_and_your_family": "For You & Your Family",
+      "about_us": "About Us",
+      "blog": "Blog"
+    },
+    "footer": {
+      "privacy_policy": "Privacy Policy",
+      "faq": "FAQ",
+      "copy_rights": "جميع الحقوق محفوظة لشبكة صلة الطبية 2021",
+      "contact_us": "Contact Us",
+      "contact_info": "Contact Info",
+      "stay_toned": "Stay Toned",
+      "email": "Email",
+      "message": "Leave us a message",
+      "send": "Send"
+    }
+  },
+  "dashboard": {
+
+  }
+}

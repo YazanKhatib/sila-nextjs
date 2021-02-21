@@ -16,7 +16,12 @@ import mission from '../../src/assets/svg/mission.svg'
 import {StickyHeader} from '../../src/containers/Header/Header'
 import Footer from '../../src/containers/Footer/Footer'
 
+// Lang
+import {useTranslation} from "react-i18next";
+
 export default function Blog() {
+
+    const { i18n, t } = useTranslation();
 
     const [activeQuestion, setActiveQuestion] = useState('');
 
@@ -59,7 +64,7 @@ export default function Blog() {
     ]
 
     return (
-        <div className={'page-container'}>
+        <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
             <StickyHeader activeItem={'about_us'} breadcrumbs={breadcrumbs} title={'تعرف علينا'} />
 
             <div className={'content-container'}>

@@ -1,51 +1,58 @@
 /* Normal header */
-.left-rectangle { position: absolute; left: 0; top: 0; height: 80vh; width: auto; overflow: hidden; }
-.left-rectangle img { height: 100%; width: auto }
-.right-rectangle { position: absolute; right: 0; bottom: 0; height: 30vh; width: auto; overflow: hidden; }
-.right-rectangle.home-page { bottom: unset; top: 70vh; height: 400px; width: 200px; }
-.right-rectangle .clip { width: 100%; height: 100%; background-size: cover; -webkit-clip-path: url(#right-rectangle-clip-path); clip-path: url(#right-rectangle-clip-path); }
-.right-rectangle .clip .overlay { height: 100%; width: 100%; background: linear-gradient(180deg, rgba(101, 209, 219, .28), rgba(0, 173, 238, .77)) }
-/*.right-rectangle img { height: 100%; width: auto }*/
+.header .big-rectangle { position: absolute; right: 0; top: 0; height: 90vh; width: auto; overflow: hidden; }
+.header .big-rectangle img { height: 100%; width: auto }
+.header .small-rectangle { position: absolute; left: 0; bottom: 0; height: 30vh; width: auto; overflow: hidden; }
+.header .small-rectangle.home-page { bottom: unset; top: 70vh; height: 400px; width: 200px; }
+.header .small-rectangle .clip { width: 100%; height: 100%; background-size: cover; -webkit-clip-path: url(#small-rectangle-clip-path); clip-path: url(#small-rectangle-clip-path); }
+.header .small-rectangle .clip .overlay { height: 100%; width: 100%; background: linear-gradient(180deg, rgba(101, 209, 219, .28), rgba(0, 173, 238, .77)) }
+.header.rtl .big-rectangle { right: unset; left: 0 }
+.header.rtl .small-rectangle { left: unset; right: 0 }
+.header.rtl .small-rectangle .clip { -webkit-clip-path: url(#small-rectangle-clip-path-rtl); clip-path: url(#small-rectangle-clip-path-rtl); }
 
 .header .top-nav { position: relative; padding-top: 60px; display: flex; justify-content: space-between; align-items: center }
 .header .top-nav .logo-side { cursor: pointer; width: auto }
 .header .top-nav .logo-side img { height: 72px; width: auto }
 .header .top-nav .menu-side .menu { padding: 0; margin: 0; list-style: none; display: flex; justify-content: center }
-.header .top-nav .menu-side .menu li { cursor: pointer; margin-left: 20px }
-.header .top-nav .menu-side .menu li:last-of-type { margin-left: 0 }
+.header .top-nav .menu-side .menu li { cursor: pointer; margin-right: 20px }
+.header .top-nav .menu-side .menu li:last-of-type { margin-right: 0 }
 .header .top-nav .menu-side .menu li span { text-shadow: 0 0 2px rgba(0, 0, 0, .2); z-index: 99; position: relative; color: #FFF; font-family: 'Hacen Tunisia Lt'; font-size: 20px; }
-.header .top-nav .menu-side .menu li.active span::before { content: ''; z-index: -1; border-top-left-radius: 100px; border-bottom-left-radius: 100px; transition: all .3s ease-in-out; position: absolute; height: 100%; width: 26px; background: #7BDC68; right: 10%; }
+.header .top-nav .menu-side .menu li.active span::before { content: ''; z-index: -1; border-top-right-radius: 100px; border-bottom-right-radius: 100px; transition: all .3s ease-in-out; position: absolute; height: 100%; width: 26px; background: #7BDC68; left: 10%; }
 .header .top-nav .menu-side .menu li.active:hover span::before { width: calc(90% + 10px); }
+.header.rtl .top-nav { direction: rtl; }
+.header.rtl .top-nav .menu-side .menu li { margin-right: 0; margin-left: 20px; }
+.header.rtl .top-nav .menu-side .menu li:last-of-type { margin-left: 0; margin-right: 0; }
+.header.rtl .top-nav .menu-side .menu li.active span::before { border-radius: 0; border-top-left-radius: 100px; border-bottom-left-radius: 100px; right: 10%; left: unset }
 
 .header .header-body { position: relative; padding-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end }
-.header .header-body .mockup { flex: 1; padding-right: 16%; z-index: 9999; height: 70vh; width: auto; }
+.header .header-body .mockup { flex: 1; padding-left: 16%; z-index: 9999; height: 70vh; width: auto; }
 .header .header-body .mockup img { height: 100%; width: auto; }
 .header .header-body .mockup .markets { display: flex; }
-.header .header-body .mockup .markets img { cursor: pointer; width: auto; height: 42px; margin-left: 30px }
-.header .header-body .mockup .markets img:last-of-type { margin-left: 0 }
-
-.header .header-body .counter { display: flex; flex-direction: column; align-items: flex-end }
-.header .header-body .counter .stay-toned h1 { white-space: nowrap; color: #7BDC68; font-size: 4.5em; font-family: 'Hacen Tunisia'; font-weight: bold; margin-bottom: 8px; }
-.header .header-body .counter .counter-boxes { display: grid; grid-template-columns: repeat(2, 1fr); direction: ltr; column-gap: 26px; row-gap: 26px; }
-.header .header-body .counter .counter-boxes .counter-box { height: 140px; width: 140px; background: #FFF; border-radius: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, .1); display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.header .header-body .counter .counter-boxes .counter-box span { line-height: 1.5; font-family: 'Hacen Tunisia'; font-size: 1.6em; font-weight: 200; color: #14ACE3; }
-.header .header-body .counter .counter-boxes .counter-box span.type { color: #787878 }
-
+.header .header-body .mockup .markets img { cursor: pointer; width: auto; height: 42px; margin-right: 30px }
+.header .header-body .mockup .markets img:last-of-type { margin-right: 0 }
 .header .header-body .welcome-message { flex: 1; display: flex; flex-direction: column; align-items: flex-start }
-.header .header-body .welcome-message h1 { white-space: nowrap; color: #7BDC68; line-height: 1.2; font-size: 56px; font-family: 'Hacen Tunisia'; font-weight: bold; }
-.header .header-body .welcome-message p { font-family: 'Hacen Tunisia Lt'; color: #343434; font-size: 18px; }
+.header .header-body .welcome-message h1 { text-align: left; white-space: nowrap; color: #7BDC68; line-height: 1.2; font-size: 56px; font-family: 'Hacen Tunisia'; font-weight: bold; }
+.header .header-body .welcome-message p { font-family: 'Hacen Tunisia Lt'; color: #343434; font-size: 18px; text-align: left}
 .header .header-body .welcome-message .header-button { cursor: pointer; margin-top: 30px; align-self: center; background: #05A5E1; width: fit-content; border-radius: 100px; display: flex; flex-direction: row-reverse; justify-content: center; align-items: center; }
 .header .header-body .welcome-message .header-button .icon-container { background: #00ADEE; width: 50px; height: 50px; border-radius: 100px; display: flex; justify-content: center; align-items: center; }
 .header .header-body .welcome-message .header-button .icon-container img { width: 40%; height: auto; transform: translateX(14%); }
 .header .header-body .welcome-message .header-button span { padding: 0 16px; font-family: 'Hacen Tunisia Lt'; color: #FFF; font-size: 16px; }
+.header.rtl .header-body { direction: rtl }
+.header.rtl .header-body .welcome-message h1 { text-align: right; }
+.header.rtl .header-body .welcome-message p { text-align: right }
+.header.rtl .header-body .mockup { padding-right: 16%; }
+.header.rtl .header-body .mockup .markets img { margin-left: 30px; margin-right: 0 }
+.header.rtl .header-body .mockup .markets img:last-of-type { margin-right: 0; margin-left: 0; }
+
 
 /* Sticky header */
 .sticky-header .top-nav { z-index: 999999999; right: 0; left: 0; top: 0; background: #FFF; box-shadow: 0 4px 10px rgba(0, 0, 0, .1); border-bottom-left-radius: 80px; border-bottom-right-radius: 80px; padding: 30px 80px 10px; width: -webkit-fill-available; position: fixed; }
 .sticky-header .top-nav .logo-side img { height: 60px; width: auto; }
-.sticky-header .top-nav .menu-side .menu li { margin-left: 30px }
+.sticky-header .top-nav .menu-side .menu li { margin-right: 30px; margin-left: 0 }
 .sticky-header .top-nav .menu-side .menu li span { color: #14ACE3; text-shadow: 0 0 2px rgba(0, 0, 0, .15); }
 .sticky-header .top-nav .menu-side .menu li.active span::before { background: #B4E85E }
 .sticky-header .top-nav .menu-side .menu li.active:hover span::before { width: calc(90% + 15px); }
+.sticky-header.rtl .top-nav .menu-side .menu li { margin-left: 30px; margin-right: 0 }
+.sticky-header.rtl .top-nav .menu-side .menu li:last-of-type { margin-right: 0; margin-left: 0 }
 
 .sticky-header { margin-bottom: 80px }
 .sticky-header .header-body { padding-bottom: 0 }

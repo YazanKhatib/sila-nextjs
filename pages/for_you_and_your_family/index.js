@@ -14,7 +14,12 @@ import category_5 from '../../src/assets/images/categories/5.jpg'
 import {StickyHeader} from '../../src/containers/Header/Header'
 import Footer from '../../src/containers/Footer/Footer'
 
+// Lang
+import {useTranslation} from "react-i18next";
+
 export default function ForYouAndYourFamily() {
+
+    const { i18n, t } = useTranslation();
 
     const [activeQuestion, setActiveQuestion] = useState('');
 
@@ -37,7 +42,7 @@ export default function ForYouAndYourFamily() {
     ]
 
     return (
-        <div className={'page-container'}>
+        <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
             <StickyHeader activeItem={'for_you_and_your_family'} breadcrumbs={breadcrumbs} title={'لك ولعائلتك'} />
 
             <div className={'content-container'}>

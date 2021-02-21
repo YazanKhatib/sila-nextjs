@@ -4,9 +4,8 @@ import { useRouter } from 'next/router'
 import Link from "next/link";
 
 // Assets
-import leftRectangle from '../../assets/svg/background/left_rectangle.svg'
-import rightRectangle from '../../assets/svg/background/right_rectangle.svg'
-// import rightRectangleHome from '../../assets/svg/background/right_rectangle_home.svg'
+import bigRectangle from '../../assets/svg/background/big_rectangle.svg'
+import bigRectangleRTL from '../../assets/svg/background/big_rectangle_rtl.svg'
 import right_image from '../../assets/images/background/home_right.jpg'
 import logo from '../../assets/svg/logo/vertical_logo_light_theme.png'
 import mockup from '../../assets/svg/mobile_moukup.svg'
@@ -15,88 +14,56 @@ import market_2 from "../../assets/images/markets/market_2.png";
 import market_1 from "../../assets/images/markets/market_1.png";
 import background_blog from '../../assets/images/background/background_blog.jpg'
 
+// Lang
+import { useTranslation } from 'react-i18next';
+
 export function Header(props) {
 
-    const [launchAt, setLaunchAt] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0
-    })
+    const { t, i18n } = useTranslation();
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         const   launchDate = new Date('Feb 18, 2021 16:30:00').getTime(),
-    //                 currentData = new Date().getTime();
-    //
-    //         let distance = launchDate - currentData;
-    //
-    //         setLaunchAt({
-    //             days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-    //             hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-    //             minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-    //             seconds: Math.floor((distance % (1000 * 60)) / 1000),
-    //         })
-    //     }, 1000)
-    // })
-
-    const renderCounterBox = (type, duration) => {
-        return <div className={'counter-box'}>
-            <span className={'duration'}>{duration}</span>
-            <span className={'type'}>{type}</span>
-        </div>
-    }
+    const router = useRouter();
 
     return (
-        <div className={'header'} style={!props.isComingSoon? {marginBottom: 50}:{}}>
-            <div className={'left-rectangle'}>
-                <img src={leftRectangle} alt=""/>
+        <div className={'header ' + (i18n.language === 'ar'? 'rtl':'')}>
+            <div className={'big-rectangle'}>
+                <img src={i18n.language === 'ar'? bigRectangleRTL:bigRectangle} alt=""/>
             </div>
 
             <svg className="clip-path">
-                <clipPath id="right-rectangle-clip-path" clipPathUnits="objectBoundingBox">
-                    <path d="M1,0 l-0.945,0.488 c-0.076,0.043,-0.078,0.114,0.027,0.16 l0.918,0.352 V0"></path>
+                <clipPath id="small-rectangle-clip-path-rtl" clipPathUnits="objectBoundingBox">
+                    <path d="M1,0 L0.082,0.475 c-0.12,0.062,-0.085,0.138,0.038,0.183 l0.888,0.342 L1,0" />
+                </clipPath>
+
+                <clipPath id="small-rectangle-clip-path" clipPathUnits="objectBoundingBox">
+                    <path d="M0,0 l0.926,0.475 c0.12,0.062,0.085,0.138,-0.038,0.183 L0,1 L0,0" />
                 </clipPath>
             </svg>
 
-            {props.isComingSoon? <div className={'right-rectangle'}>
-                <img src={rightRectangle} alt=""/>
-            </div> : <div className={'right-rectangle home-page'}>
+            <div className={'small-rectangle home-page'}>
                 <div className="clip" style={{ backgroundImage: `url(${right_image})` }}>
                     <div className="overlay" />
                 </div>
-            </div>}
+            </div>
 
             <div className={'top-nav'}>
-                <div className={'logo-side'} onClick={() => {router.push('/')}}>
+                <div className={'logo-side'} onClick={() => { router.push('/') }}>
                     <img src={logo} alt=""/>
                 </div>
 
-                {!props.isComingSoon && <div className={'menu-side'}>
+                <div className={'menu-side'}>
                     <ul className={'menu'}>
-                        <li className={'active'}><span>الصفحة الرئيسية</span></li>
-                        <li><Link href={'/health_care_professionals'}><span>متخصصي الرعاية</span></Link></li>
-                        <li><Link href={'/for_you_and_your_family'}><span>لك ولعائلتك</span></Link></li>
-                        <li><Link href={'/about_us'}><span>تعرف علينا</span></Link></li>
-                        <li><Link href={'/blog'}><span>الأخبار</span></Link></li>
+                        <li className={'active'}><span>{t('public.menu.home')}</span></li>
+                        <li><Link href={'/health_care_professionals'}><span>{t('public.menu.health_care_professionals')}</span></Link></li>
+                        <li><Link href={'/for_you_and_your_family'}><span>{t('public.menu.for_you_and_your_family')}</span></Link></li>
+                        <li><Link href={'/about_us'}><span>{t('public.menu.about_us')}</span></Link></li>
+                        <li><Link href={'/blog'}><span>{t('public.menu.blog')}</span></Link></li>
 
                     </ul>
-                </div>}
+                </div>
             </div>
 
-            <div className={'header-body'} style={!props.isComingSoon? {alignItems: 'center'}:{}}>
-                {props.isComingSoon? <div className={'counter'}>
-                    <div className={'stay-toned'}>
-                        <h1>ترقبوا انطلاقنا...</h1>
-                    </div>
-
-                    <div className={'counter-boxes'}>
-                        {renderCounterBox('يوم', launchAt.days)}
-                        {renderCounterBox('ساعة', launchAt.hours)}
-                        {renderCounterBox('دقيقة', launchAt.minutes)}
-                        {renderCounterBox('ثانية', launchAt.seconds)}
-                    </div>
-                </div> : <div className={'welcome-message'}>
+            <div className={'header-body'} style={{alignItems: 'center'}}>
+                <div className={'welcome-message'}>
                     <h1>صلة طبيبك بأيدك</h1>
 
                     <p>نحن نجعل الرعاية الصحية ذات جودة عالية والخدمات المقدمة في متناول يديك صلة
@@ -110,7 +77,7 @@ export function Header(props) {
                         <span>شاهد الفيديو الخاص بنا</span>
                     </div>
 
-                </div>}
+                </div>
 
                 <div className={'mockup'}>
                     <img src={mockup} alt="..."/>
@@ -128,10 +95,12 @@ export function Header(props) {
 
 export function StickyHeader(props) {
 
+    const { t, i18n } = useTranslation();
+
     const router = useRouter();
 
     return (
-        <div className={'header sticky-header'}>
+        <div className={'header sticky-header ' +(i18n.language === 'ar'? 'rtl':'')}>
             <div className={'top-nav'}>
                 <div className={'logo-side'} onClick={() => {router.push('/')}}>
                     <img src={logo} alt=""/>
@@ -139,11 +108,11 @@ export function StickyHeader(props) {
 
                 <div className={'menu-side'}>
                     <ul className={'menu'}>
-                        <li><Link href={'/'}><span>الصفحة الرئيسية</span></Link></li>
-                        <li className={props.activeItem == 'health_care'? 'active':''}><Link href={'/health_care_professionals'}><span>متخصصي الرعاية</span></Link></li>
-                        <li className={props.activeItem == 'for_you_and_your_family'? 'active':''}><Link href={'/for_you_and_your_family'}><span>لك ولعائلتك</span></Link></li>
-                        <li className={props.activeItem == 'about_us'? 'active':''}><Link href={'/about_us'}><span>تعرف علينا</span></Link></li>
-                        <li className={props.activeItem == 'blog'? 'active':''}><Link href={'/blog'}><span>الأخبار</span></Link></li>
+                        <li><Link href={'/'}><span>{t('public.menu.home')}</span></Link></li>
+                        <li className={props.activeItem == 'health_care'? 'active':''}><Link href={'/health_care_professionals'}><span>{t('public.menu.health_care_professionals')}</span></Link></li>
+                        <li className={props.activeItem == 'for_you_and_your_family'? 'active':''}><Link href={'/for_you_and_your_family'}><span>{t('public.menu.for_you_and_your_family')}</span></Link></li>
+                        <li className={props.activeItem == 'about_us'? 'active':''}><Link href={'/about_us'}><span>{t('public.menu.about_us')}</span></Link></li>
+                        <li className={props.activeItem == 'blog'? 'active':''}><Link href={'/blog'}><span>{t('public.menu.blog')}</span></Link></li>
                     </ul>
                 </div>
             </div>

@@ -8,7 +8,12 @@ import NewsCard from "../../src/components/Card/NewsCard/NewsCard";
 import {StickyHeader} from '../../src/containers/Header/Header'
 import Footer from '../../src/containers/Footer/Footer'
 
+// Lang
+import {useTranslation} from "react-i18next";
+
 export default function Blog() {
+
+    const { i18n, t } = useTranslation();
 
     const breadcrumbs = [
         {
@@ -22,7 +27,7 @@ export default function Blog() {
     ]
 
     return (
-        <div className={'page-container'}>
+        <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
             <StickyHeader activeItem={'blog'} breadcrumbs={breadcrumbs} title={'الأخبار'} />
 
             <div className={'content-container'}>
