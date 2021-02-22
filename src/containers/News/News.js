@@ -5,12 +5,17 @@
 // Components
 import NewsCard from "../../components/Card/NewsCard/NewsCard";
 
+// Lang
+import { useTranslation } from 'react-i18next';
+
 export default function News() {
+
+    const { t } = useTranslation();
 
     return (
         <section className={'latest-news-section'}>
             <div className={'section-title'}>
-                <h1>آخر الآخبار</h1>
+                <h1>{t('public.home.latest_news.title')}</h1>
             </div>
 
             <div className={'section-content'}>

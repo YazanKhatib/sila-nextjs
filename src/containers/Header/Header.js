@@ -64,17 +64,15 @@ export function Header(props) {
 
             <div className={'header-body'} style={{alignItems: 'center'}}>
                 <div className={'welcome-message'}>
-                    <h1>صلة طبيبك بأيدك</h1>
+                    <h1>{t('public.home.header.title')}</h1>
 
-                    <p>نحن نجعل الرعاية الصحية ذات جودة عالية والخدمات المقدمة في متناول يديك صلة
-                        الأكثر سرعة يقدم لكم أكثر من 1000 طبيب معتمد وموثوق وبكافة الاختصاصات
-                        لتقديم استشارات طبية والخدمات الصحية مع المتابعة اليومية بأقل تكلفة وأسرع وقت</p>
+                    <p>{t('public.home.header.description')}</p>
 
                     <div className={'header-button'}>
                         <div className={'icon-container'}>
                             <img src={play} alt=""/>
                         </div>
-                        <span>شاهد الفيديو الخاص بنا</span>
+                        <span>{t('public.home.header.button')}</span>
                     </div>
 
                 </div>
@@ -109,10 +107,10 @@ export function StickyHeader(props) {
                 <div className={'menu-side'}>
                     <ul className={'menu'}>
                         <li><Link href={'/'}><span>{t('public.menu.home')}</span></Link></li>
-                        <li className={props.activeItem == 'health_care'? 'active':''}><Link href={'/health_care_professionals'}><span>{t('public.menu.health_care_professionals')}</span></Link></li>
-                        <li className={props.activeItem == 'for_you_and_your_family'? 'active':''}><Link href={'/for_you_and_your_family'}><span>{t('public.menu.for_you_and_your_family')}</span></Link></li>
-                        <li className={props.activeItem == 'about_us'? 'active':''}><Link href={'/about_us'}><span>{t('public.menu.about_us')}</span></Link></li>
-                        <li className={props.activeItem == 'blog'? 'active':''}><Link href={'/blog'}><span>{t('public.menu.blog')}</span></Link></li>
+                        <li className={props.activeItem === 'health_care'? 'active':''}><Link href={'/health_care_professionals'}><span>{t('public.menu.health_care_professionals')}</span></Link></li>
+                        <li className={props.activeItem === 'for_you_and_your_family'? 'active':''}><Link href={'/for_you_and_your_family'}><span>{t('public.menu.for_you_and_your_family')}</span></Link></li>
+                        <li className={props.activeItem === 'about_us'? 'active':''}><Link href={'/about_us'}><span>{t('public.menu.about_us')}</span></Link></li>
+                        <li className={props.activeItem === 'blog'? 'active':''}><Link href={'/blog'}><span>{t('public.menu.blog')}</span></Link></li>
                     </ul>
                 </div>
             </div>

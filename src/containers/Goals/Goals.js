@@ -6,7 +6,12 @@ import goal_1 from "../../assets/svg/goals/goal_1.svg";
 // Components
 import Button from "../../components/Button/Button";
 
+// Lang
+import { useTranslation } from 'react-i18next';
+
 export default function Goals() {
+
+    const { t } = useTranslation();
 
     const renderGoalItem = (title, description) => {
         return <div className={'goal-item'}>
@@ -26,19 +31,19 @@ export default function Goals() {
     return (
         <section className={'features-section'}>
             <div className={'section-title'}>
-                <h1>أهدافنا</h1>
+                <h1>{t('public.home.goals.title')}</h1>
             </div>
 
             <div className={'section-content'}>
                 <div className={'goals'}>
-                    {renderGoalItem('مجتمع طبي', 'إنشاء أول شبكة طبية الكترونية في سورية')}
-                    {renderGoalItem('مواكبة التطورات', 'تسهيل الخدمات الطبية في سورية')}
-                    {renderGoalItem('الرعاية', 'تقديم الرعاية الطبية المتكاملة وتأمين كافة الادوية في سوريا')}
-                    {renderGoalItem('الشمولية', 'نسعى ليكون تطبيق صلة الطبي الأشمل على النطاق سوريا')}
+                    {renderGoalItem(t('public.home.goals.items.1.title'), t('public.home.goals.items.1.description'))}
+                    {renderGoalItem(t('public.home.goals.items.2.title'), t('public.home.goals.items.2.description'))}
+                    {renderGoalItem(t('public.home.goals.items.3.title'), t('public.home.goals.items.3.description'))}
+                    {renderGoalItem(t('public.home.goals.items.4.title'), t('public.home.goals.items.4.description'))}
                 </div>
 
                 <div className={'more-items-button-container'}>
-                    <Button title={'استكشف ميزاتك الآن'} blueButtonTitle={'المزيد من الميزات'} style={{width: 200}}/>
+                    <Button title={t('public.button.primary_title_1')} blueButtonTitle={t('public.button.secondary_title_1')} style={{width: 200}}/>
                 </div>
             </div>
         </section>

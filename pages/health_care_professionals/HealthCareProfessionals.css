@@ -10,7 +10,8 @@
 .page-container .content-container .categories .item .thumbnail-outer-container .title-container h1 { text-shadow: 0 0 2px rgba(0, 0, 0, .15); color: #FFF; font-size: 40px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: center; }
 .page-container .content-container .categories .item:hover .thumbnail-outer-container .overlay { opacity: 1 }
 .page-container .content-container .categories .item:hover .thumbnail-outer-container .thumbnail-inner-container { transform: scale(1); }
-.page-container.rtl .content-container .categories .item::after { right: 0; left: unset }
+.page-container.rtl .content-container .categories { direction: rtl }
+.page-container.rtl .content-container .categories .item::after { right: unset; left: 0 }
 
 .page-container .content-container .questions {}
 .page-container .content-container .questions h1 { color: #7BDC68; font-size: 52px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: left; margin-bottom: 20px; }
@@ -20,8 +21,8 @@
 .page-container .content-container .questions .items .item .item-title .icon-container { transition: all.3s ease-in-out; }
 .page-container .content-container .questions .items .item .item-title .icon-container.active { transform: rotate(45deg) }
 .page-container .content-container .questions .items .item .item-title .icon-container i { color: #00ADEE; font-size: 24px; }
-.page-container .content-container .questions .items .item .item-description { overflow: hidden; padding: 0px 24px; padding-bottom: 0; transition: all.3s ease-in-out; height: 0; transform: scaleY(0); transform-origin: top; }
-.page-container .content-container .questions .items .item .item-description.active { transform: scaleY(1); height: auto; padding: 18px 24px; padding-bottom: 30px; }
+.page-container .content-container .questions .items .item .item-description { overflow: hidden; padding: 0px 24px; padding-bottom: 0; transition: all.3s ease-in-out; max-height: 0; transform: scaleY(0); transform-origin: top; }
+.page-container .content-container .questions .items .item .item-description.active { transform: scaleY(1); max-height: 2000px; padding: 18px 24px; padding-bottom: 30px; }
 .page-container .content-container .questions .items .item .item-description > p { margin-bottom: 20px; font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: left; font-weight: 200; }
 .page-container .content-container .questions .items .item .item-description ul li { display: flex; margin-bottom: 14px; }
 .page-container .content-container .questions .items .item .item-description ul li:last-of-type { margin-bottom: 0 }

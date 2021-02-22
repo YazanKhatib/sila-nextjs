@@ -21,15 +21,13 @@ export default function ForYouAndYourFamily() {
 
     const { i18n, t } = useTranslation();
 
-    const [activeQuestion, setActiveQuestion] = useState('');
-
     const breadcrumbs = [
         {
-            title: 'الصفحة الرئيسية',
+            title: t('public.menu.home'),
             onPress: () => {}
         },
         {
-            title: 'لك ولعائلتك',
+            title: t('public.menu.for_you_and_your_family'),
             onPress: () => {}
         }
     ]
@@ -43,7 +41,7 @@ export default function ForYouAndYourFamily() {
 
     return (
         <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
-            <StickyHeader activeItem={'for_you_and_your_family'} breadcrumbs={breadcrumbs} title={'لك ولعائلتك'} />
+            <StickyHeader activeItem={'for_you_and_your_family'} breadcrumbs={breadcrumbs} title={t('public.menu.for_you_and_your_family')} />
 
             <div className={'content-container'}>
                 <section className={'categories'}>
