@@ -26,7 +26,8 @@ export function Header(props) {
     return (
         <div className={'header ' + (i18n.language === 'ar'? 'rtl':'')}>
             <div className={'big-rectangle'}>
-                <img src={i18n.language === 'ar'? bigRectangleRTL:bigRectangle} alt=""/>
+                <img className={'rtl'} src={bigRectangleRTL} alt=""/>
+                <img className={'ltr'} src={bigRectangle} alt=""/>
             </div>
 
             <svg className="clip-path">

@@ -25,11 +25,11 @@ export default function HealthCareProfessionals() {
 
     const breadcrumbs = [
         {
-            title: 'الصفحة الرئيسية',
+            title: t('public.menu.home'),
             onPress: () => {}
         },
         {
-            title: 'متخصصي الرعاية',
+            title: t('public.menu.health_care_professionals'),
             onPress: () => {}
         }
     ]

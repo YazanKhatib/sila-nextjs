@@ -10,8 +10,8 @@
 .page-container .content-container .categories .item .thumbnail-outer-container .title-container h1 { text-shadow: 0 0 2px rgba(0, 0, 0, .15); color: #FFF; font-size: 40px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: center; }
 .page-container .content-container .categories .item:hover .thumbnail-outer-container .overlay { opacity: 1 }
 .page-container .content-container .categories .item:hover .thumbnail-outer-container .thumbnail-inner-container { transform: scale(1); }
-.page-container.rtl .content-container .categories { direction: rtl }
-.page-container.rtl .content-container .categories .item::after { right: unset; left: 0 }
+body.rtl .page-container .content-container .categories { direction: rtl }
+body.rtl .page-container .content-container .categories .item::after { right: unset; left: 0 }
 
 .page-container .content-container .questions {}
 .page-container .content-container .questions h1 { color: #7BDC68; font-size: 52px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: left; margin-bottom: 20px; }
@@ -29,11 +29,11 @@
 .page-container .content-container .questions .items .item .item-description ul li .dot { margin-top: 5px; height: 12px; width: 12px; background: #05A5E1; border-radius: 100px; margin-right: 18px; }
 .page-container .content-container .questions .items .item .item-description ul li h6 { margin-bottom: 4px; font-family: 'Hacen Tunisia'; color: #535252; font-size: 17px; text-align: left; font-weight: 600; }
 .page-container .content-container .questions .items .item .item-description ul li p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 16px; text-align: left; font-weight: 200; }
-.page-container.rtl .content-container .questions h1 { text-align: right; }
-.page-container.rtl .content-container .questions .items .item .item-title { flex-direction: row-reverse }
-.page-container.rtl .content-container .questions .items .item .item-title h6 { text-align: right; margin-left: 20px; margin-right: 0 }
-.page-container.rtl .content-container .questions .items .item .item-description > p { text-align: right; }
-.page-container.rtl .content-container .questions .items .item .item-description ul { direction: rtl; }
-.page-container.rtl .content-container .questions .items .item .item-description ul li h6 { text-align: right; }
-.page-container.rtl .content-container .questions .items .item .item-description ul li .dot { margin-left: 18px; margin-right: 0 }
-.page-container.rtl .content-container .questions .items .item .item-description ul li p { text-align: right; }
+body.rtl .page-container .content-container .questions h1 { text-align: right; }
+body.rtl .page-container .content-container .questions .items .item .item-title { flex-direction: row-reverse }
+body.rtl .page-container .content-container .questions .items .item .item-title h6 { text-align: right; margin-left: 20px; margin-right: 0 }
+body.rtl .page-container .content-container .questions .items .item .item-description > p { text-align: right; }
+body.rtl .page-container .content-container .questions .items .item .item-description ul { direction: rtl; }
+body.rtl .page-container .content-container .questions .items .item .item-description ul li h6 { text-align: right; }
+body.rtl .page-container .content-container .questions .items .item .item-description ul li .dot { margin-left: 18px; margin-right: 0 }
+body.rtl .page-container .content-container .questions .items .item .item-description ul li p { text-align: right; }

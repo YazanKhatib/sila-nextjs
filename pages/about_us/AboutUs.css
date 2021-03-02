@@ -7,9 +7,10 @@
 .page-container .content-container .about-us .images .primary-img { box-shadow: 0 2px 10px rgba(0, 0, 0, .25); border-radius: 18px; overflow: hidden; width: 100%; height: auto }
 .page-container .content-container .about-us .images .primary-img img { width: inherit; height: inherit }
 .page-container .content-container .about-us .images .secondary-img { position: absolute; bottom: -40px; left: -140px; box-shadow: 0 2px 10px rgba(0, 0, 0, .16); background-position: center center; background-repeat: no-repeat; background-size: cover; height: 270px; width: 270px; background: #F8F8F8; border-radius: 18px; }
-.page-container.rtl .content-container .about-us .about-us-info h2 { text-align: right; }
-.page-container.rtl .content-container .about-us .about-us-info p { text-align: right; }
-.page-container.rtl .content-container .about-us .images .secondary-img { right: -140px; }
+body.rtl .page-container .content-container .about-us { direction: rtl }
+body.rtl .page-container .content-container .about-us .about-us-info h2 { text-align: right; }
+body.rtl .page-container .content-container .about-us .about-us-info p { text-align: right; }
+body.rtl .page-container .content-container .about-us .images .secondary-img { right: -140px; }
 
 .page-container .content-container .vision-mission { display: grid; grid-template-columns: 1fr 10fr 1fr 10fr 1fr; }
 .page-container .content-container .vision-mission .item { padding: 50px; box-shadow: 0 0 10px rgba(0, 0, 0, .1); border-radius: 50px; }
@@ -18,9 +19,9 @@
 .page-container .content-container .vision-mission .item .title-icon .icon-container img { width: 46%; height: auto; }
 .page-container .content-container .vision-mission .item .title-icon h3 { color: #00ADEE; font-size: 32px; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: right; }
 .page-container .content-container .vision-mission .item .item-content p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 20px; text-align: left; font-weight: 400; }
-.page-container.rtl .content-container .vision-mission .item .title-icon { flex-direction: row-reverse }
-.page-container.rtl .content-container .vision-mission .item .title-icon .icon-container { margin-left: 18px; margin-right: 0 }
-.page-container.rtl .content-container .vision-mission .item .item-content p { text-align: right; }
+body.rtl .page-container .content-container .vision-mission .item .title-icon { flex-direction: row-reverse }
+body.rtl .page-container .content-container .vision-mission .item .title-icon .icon-container { margin-left: 18px; margin-right: 0 }
+body.rtl .page-container .content-container .vision-mission .item .item-content p { text-align: right; }
 
 .page-container .content-container .team-members { margin-bottom: 34px; }
 .page-container .content-container .team-members .section-content .members { display: grid; grid-column-gap: 46px; grid-template-columns: 1fr 1fr 1fr; }
@@ -35,12 +36,12 @@
 .page-container .content-container .team-members .section-content .members .item .item-info span { color: #00ADEE; font-size: 15px; font-family: 'Hacen Tunisia Lt'; font-weight: 200; text-align: center; }
 
 .page-container .content-container .privacy-policy .section-content .terms { display: grid; grid-column-gap: 46px; grid-row-gap: 46px; grid-template-columns: 1fr 1fr; }
-.page-container .content-container .privacy-policy .section-content .terms .item .icon { float: left; background: #00ADEE; height: 60px; width: 60px; border-radius: 100px; display: flex; justify-content: center; align-items: center; margin-right: 30px; }
+.page-container .content-container .privacy-policy .section-content .terms .item .icon { margin-bottom: 4px; float: left; background: #00ADEE; height: 60px; width: 60px; border-radius: 100px; display: flex; justify-content: center; align-items: center; margin-right: 30px; }
 .page-container .content-container .privacy-policy .section-content .terms .item .icon i { color: #FFF; font-size: 24px; }
 .page-container .content-container .privacy-policy .section-content .terms .item p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 20px; text-align: left; font-weight: 200; }
-.page-container.rtl .content-container .privacy-policy .section-content .terms { direction: rtl }
-.page-container.rtl .content-container .privacy-policy .section-content .terms .item .icon { float: right; margin-left: 30px; margin-right: 0 }
-.page-container.rtl .content-container .privacy-policy .section-content .terms .item p { text-align: right; }
+body.rtl .page-container .content-container .privacy-policy .section-content .terms { direction: rtl }
+body.rtl .page-container .content-container .privacy-policy .section-content .terms .item .icon { float: right; margin-left: 30px; margin-right: 0 }
+body.rtl .page-container .content-container .privacy-policy .section-content .terms .item p { text-align: right; }
 
 .page-container .content-container .frequently-questions .section-content .questions-image { display: grid; grid-column-gap: 30px; grid-template-columns: 4fr 5fr; }
 .page-container .content-container .frequently-questions .section-content .questions-image .image { box-shadow: 0 2px 10px rgba(0, 0, 0, .25); border-radius: 18px; overflow: hidden; width: 100%; height: auto }
@@ -51,13 +52,11 @@
 .page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-title .icon-container { transition: all.3s ease-in-out; }
 .page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-title .icon-container.active { transform: rotate(45deg) }
 .page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-title .icon-container i { color: #00ADEE; font-size: 24px; }
-.page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-description { overflow: hidden; padding: 0px 24px; padding-bottom: 0; transition: all.3s ease-in-out; height: 0; transform: scaleY(0); transform-origin: top; }
-.page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-description.active { transform: scaleY(1); height: auto; padding: 18px 24px; padding-bottom: 30px; }
+.page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-description { overflow: hidden; padding: 0px 24px; padding-bottom: 0; transition: all.3s ease-in-out; max-height: 0; transform: scaleY(0); transform-origin: top; }
+.page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-description.active { transform: scaleY(1); max-height: 2000px; padding: 18px 24px; padding-bottom: 30px; }
 .page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-description p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: left; font-weight: 200; }
-.page-container.rtl .content-container .frequently-questions .section-content .questions-image { direction: rtl }
-.page-container.rtl .content-container .frequently-questions .section-content .questions-image .questions .item .item-title h6 { text-align: right; margin-left: 20px; margin-right: 0 }
-.page-container.rtl .content-container .frequently-questions .section-content .questions-image .questions .item .item-description p { text-align: right; }
-
-
+body.rtl .page-container .content-container .frequently-questions .section-content .questions-image { direction: rtl }
+body.rtl .page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-title h6 { text-align: right; margin-left: 20px; margin-right: 0 }
+body.rtl .page-container .content-container .frequently-questions .section-content .questions-image .questions .item .item-description p { text-align: right; }
 
 .page-container .map { margin-bottom: 0 }

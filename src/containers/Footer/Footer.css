@@ -27,27 +27,27 @@ footer .top-side .contact-us-side form { font-size: 0 }
 footer .top-side .contact-us-side input, footer .top-side .contact-us-side textarea { outline: none; width: -webkit-fill-available; border: none; padding: 12px 10px; border-radius: 5px; margin-bottom: 12px; text-align: left; font: 200 16px 'Hacen Tunisia Lt'; color: #333; }
 footer .top-side .contact-us-side textarea { resize: none }
 footer .top-side .contact-us-side button { outline: none; width: 100%; padding: 10px 20px; background: #05A5E1; border: none; border-radius: 5px; text-align: center; font: 200 18px 'Hacen Tunisia Lt'; color: #FFF; cursor: pointer; }
-footer .top-side.rtl { direction: rtl }
-footer .top-side.rtl .logo-side p { text-align: right; }
-footer .top-side.rtl .logo-side .markets img { margin-left: 30px; margin-right: 0 }
-footer .top-side.rtl .logo-side .markets img:last-of-type { margin-right: 0; margin-left: 0; }
-footer .top-side.rtl .contact-info-side .content .content-title { text-align: right; }
-footer .top-side.rtl .contact-info-side .content .contact-info ul li .icon-container { margin-right: 0; margin-left: 16px }
-footer .top-side.rtl .contact-info-side .content .contact-info ul li span { text-align: right; }
-footer .top-side.rtl .contact-info-side .content .stay-toned h5 { text-align: right; }
-footer .top-side.rtl .contact-info-side .content .stay-toned ul li { margin-right: 0; margin-left: 10px; }
-footer .top-side.rtl .contact-info-side .content .stay-toned ul li:last-of-type { margin-right: 0; margin-left: 0 }
-footer .top-side.rtl .contact-us-side h5 { text-align: right; }
-footer .top-side.rtl .contact-us-side input, footer .top-side.rtl .contact-us-side textarea { text-align: right; }
+body.rtl footer .top-side { direction: rtl }
+body.rtl footer .top-side .logo-side p { text-align: right; }
+body.rtl footer .top-side .logo-side .markets img { margin-left: 30px; margin-right: 0 }
+body.rtl footer .top-side .logo-side .markets img:last-of-type { margin-right: 0; margin-left: 0; }
+body.rtl footer .top-side .contact-info-side .content .content-title { text-align: right; }
+body.rtl footer .top-side .contact-info-side .content .contact-info ul li .icon-container { margin-right: 0; margin-left: 16px }
+body.rtl footer .top-side .contact-info-side .content .contact-info ul li span { text-align: right; }
+body.rtl footer .top-side .contact-info-side .content .stay-toned h5 { text-align: right; }
+body.rtl footer .top-side .contact-info-side .content .stay-toned ul li { margin-right: 0; margin-left: 10px; }
+body.rtl footer .top-side .contact-info-side .content .stay-toned ul li:last-of-type { margin-right: 0; margin-left: 0 }
+body.rtl footer .top-side .contact-us-side h5 { text-align: right; }
+body.rtl footer .top-side .contact-us-side input, body.rtl footer .top-side .contact-us-side textarea { text-align: right; }
 
 footer .bottom-side { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
-footer .bottom-side.rtl { direction: rtl }
+body.rtl footer .bottom-side { direction: rtl }
 footer .bottom-side div { color: #FFF; font-family: 'Hacen Tunisia Lt'; font-weight: 200; text-align: right; font-size: 18px; }
 footer .bottom-side .lang-privacy-common-questions { display: flex; align-items: center; justify-content: center }
 footer .bottom-side .lang-privacy-common-questions span { margin-right: 30px; cursor: pointer; }
 footer .bottom-side .lang-privacy-common-questions span:last-of-type { margin-right: 0 }
-footer .bottom-side.rtl .lang-privacy-common-questions span { margin-left: 30px; margin-right: 0; }
-footer .bottom-side.rtl .lang-privacy-common-questions span:last-of-type { margin-left: 0; margin-right: 0; }
+body.rtl footer .bottom-side .lang-privacy-common-questions span { margin-left: 30px; margin-right: 0; }
+body.rtl footer .bottom-side .lang-privacy-common-questions span:last-of-type { margin-left: 0; margin-right: 0; }
 
 
 /* Languages Modal */

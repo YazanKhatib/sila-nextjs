@@ -2,7 +2,7 @@
 .page-container .content-container .questions .items ul li:last-of-type { margin-bottom: 0 }
 .page-container .content-container .questions .items ul li .dot { margin-top: 5px; height: 12px; width: 12px; background: #05A5E1; border-radius: 100px; margin-right: 18px; }
 .page-container .content-container .questions .items ul li p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: left; font-weight: 200; }
-.page-container.rtl .content-container .questions .items ul { direction: rtl; }
-.page-container.rtl .content-container .questions .items ul li .dot { margin-left: 18px; margin-right: 0 }
-.page-container.rtl .content-container .questions .items ul li p { text-align: right; }
+body.rtl .page-container .content-container .questions .items ul { direction: rtl; }
+body.rtl .page-container .content-container .questions .items ul li .dot { margin-left: 18px; margin-right: 0 }
+body.rtl .page-container .content-container .questions .items ul li p { text-align: right; }
 

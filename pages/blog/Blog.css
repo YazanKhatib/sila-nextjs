@@ -12,10 +12,10 @@
 .page-container .content-container .news-section .pagination .inner-container ul li:hover span { color: #FFF; }
 .page-container .content-container .news-section .pagination .inner-container ul li img { width: 40%; height: auto }
 .page-container .content-container .news-section .pagination .inner-container ul li.next img { transform: rotate(180deg) }
-.page-container.rtl .content-container .news-section .news { direction: rtl }
-.page-container.rtl .content-container .news-section .pagination .inner-container ul { direction: rtl }
-.page-container.rtl .content-container .news-section .pagination .inner-container ul li.next img { transform: rotate(0) }
-.page-container.rtl .content-container .news-section .pagination .inner-container ul li.prev img { transform: rotate(180deg) }
+body.rtl .page-container .content-container .news-section .news { direction: rtl }
+body.rtl .page-container .content-container .news-section .pagination .inner-container ul { direction: rtl }
+body.rtl .page-container .content-container .news-section .pagination .inner-container ul li.next img { transform: rotate(0) }
+body.rtl .page-container .content-container .news-section .pagination .inner-container ul li.prev img { transform: rotate(180deg) }
 
 
 /* News Single */
@@ -28,11 +28,11 @@
 .page-container .content-container .news-single .content .share-buttons .share-button { cursor: pointer; margin-right: 20px; background: #05A5E1; border-radius: 100px; width: 105px; height: 55px; display: flex; justify-content: center; align-items: center; }
 .page-container .content-container .news-single .content .share-buttons .share-button:last-of-type { margin-left: 0; }
 .page-container .content-container .news-single .content .share-buttons .share-button i { color: #FFF; font-size: 28px; }
-.page-container.rtl .content-container .news-single { direction: rtl }
-.page-container.rtl .content-container .news-single .content h1 { text-align: right; }
-.page-container.rtl .content-container .news-single .content p { text-align: right; }
-.page-container.rtl .content-container .news-single .content .share-buttons .share-button { margin-left: 20px; margin-right: 0 }
-.page-container.rtl .content-container .news-single .content .share-buttons .share-button:last-of-type { margin-left: 0; margin-right: 0 }
+body.rtl .page-container .content-container .news-single { direction: rtl }
+body.rtl .page-container .content-container .news-single .content h1 { text-align: right; }
+body.rtl .page-container .content-container .news-single .content p { text-align: right; }
+body.rtl .page-container .content-container .news-single .content .share-buttons .share-button { margin-left: 20px; margin-right: 0 }
+body.rtl .page-container .content-container .news-single .content .share-buttons .share-button:last-of-type { margin-left: 0; margin-right: 0 }
 
 .page-container .content-container .news-single .widgets {}
 .page-container .content-container .news-single .widgets .widget { margin-bottom: 34px }
@@ -46,6 +46,6 @@
 .page-container .content-container .news-single .widgets .widget .widget-body .tags { display: flex; flex-wrap: wrap; }
 .page-container .content-container .news-single .widgets .widget .widget-body .tags .item { margin-right: 10px; margin-bottom: 10px; background: #F9F9F9; padding: 8px 30px; border-radius: 25px; white-space: nowrap; width: fit-content; }
 .page-container .content-container .news-single .widgets .widget .widget-body .tags .item span { color: #535252; font-size: 17px; font-family: 'Hacen Tunisia Lt'; }
-.page-container.rtl .content-container .news-single .widgets .widget .widget-title h5 { text-align: right; }
-.page-container.rtl .content-container .news-single .widgets .widget .widget-body .news .item .meta-data h6 { text-align: right; }
-.page-container.rtl .content-container .news-single .widgets .widget .widget-body .tags .item { margin-left: 10px; margin-right: 0 }
+body.rtl .page-container .content-container .news-single .widgets .widget .widget-title h5 { text-align: right; }
+body.rtl .page-container .content-container .news-single .widgets .widget .widget-body .news .item .meta-data h6 { text-align: right; }
+body.rtl .page-container .content-container .news-single .widgets .widget .widget-body .tags .item { margin-left: 10px; margin-right: 0 }

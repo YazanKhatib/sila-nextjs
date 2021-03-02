@@ -1,13 +1,16 @@
 /* Normal header */
 .header .big-rectangle { position: absolute; right: 0; top: 0; height: 90vh; width: auto; overflow: hidden; }
-.header .big-rectangle img { height: 100%; width: auto }
+.header .big-rectangle img { height: 100%; width: auto; display: none }
+.header .big-rectangle img.ltr { display: unset }
 .header .small-rectangle { position: absolute; left: 0; bottom: 0; height: 30vh; width: auto; overflow: hidden; }
-.header .small-rectangle.home-page { bottom: unset; top: 70vh; height: 400px; width: 200px; }
+.header .small-rectangle.home-page { bottom: unset; top: 64vh; height: 400px; width: 200px; }
 .header .small-rectangle .clip { width: 100%; height: 100%; background-size: cover; -webkit-clip-path: url(#small-rectangle-clip-path); clip-path: url(#small-rectangle-clip-path); }
 .header .small-rectangle .clip .overlay { height: 100%; width: 100%; background: linear-gradient(180deg, rgba(101, 209, 219, .28), rgba(0, 173, 238, .77)) }
-.header.rtl .big-rectangle { right: unset; left: 0 }
-.header.rtl .small-rectangle { left: unset; right: 0 }
-.header.rtl .small-rectangle .clip { -webkit-clip-path: url(#small-rectangle-clip-path-rtl); clip-path: url(#small-rectangle-clip-path-rtl); }
+body.rtl .header .big-rectangle { right: unset; left: 0 }
+body.rtl .header .big-rectangle img.ltr { display: none }
+body.rtl .header .big-rectangle img.rtl { display: unset }
+body.rtl .header .small-rectangle { left: unset; right: 0 }
+body.rtl .header .small-rectangle .clip { -webkit-clip-path: url(#small-rectangle-clip-path-rtl); clip-path: url(#small-rectangle-clip-path-rtl); }
 
 .header .top-nav { position: relative; padding-top: 60px; display: flex; justify-content: space-between; align-items: center }
 .header .top-nav .logo-side { cursor: pointer; width: auto }
@@ -18,10 +21,10 @@
 .header .top-nav .menu-side .menu li span { text-shadow: 0 0 2px rgba(0, 0, 0, .2); z-index: 99; position: relative; color: #FFF; font-family: 'Hacen Tunisia Lt'; font-size: 20px; }
 .header .top-nav .menu-side .menu li.active span::before { content: ''; z-index: -1; border-top-right-radius: 100px; border-bottom-right-radius: 100px; transition: all .3s ease-in-out; position: absolute; height: 100%; width: 26px; background: #7BDC68; left: 10%; }
 .header .top-nav .menu-side .menu li.active:hover span::before { width: calc(90% + 10px); }
-.header.rtl .top-nav { direction: rtl; }
-.header.rtl .top-nav .menu-side .menu li { margin-right: 0; margin-left: 20px; }
-.header.rtl .top-nav .menu-side .menu li:last-of-type { margin-left: 0; margin-right: 0; }
-.header.rtl .top-nav .menu-side .menu li.active span::before { border-radius: 0; border-top-left-radius: 100px; border-bottom-left-radius: 100px; right: 10%; left: unset }
+body.rtl .header .top-nav { direction: rtl; }
+body.rtl .header .top-nav .menu-side .menu li { margin-right: 0; margin-left: 20px; }
+body.rtl .header .top-nav .menu-side .menu li:last-of-type { margin-left: 0; margin-right: 0; }
+body.rtl .header .top-nav .menu-side .menu li.active span::before { border-radius: 0; border-top-left-radius: 100px; border-bottom-left-radius: 100px; right: 10%; left: unset }
 
 .header .header-body { position: relative; padding-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end }
 .header .header-body .mockup { flex: 1; padding-left: 16%; z-index: 9999; height: 70vh; width: auto; }
@@ -36,12 +39,12 @@
 .header .header-body .welcome-message .header-button .icon-container { background: #00ADEE; width: 50px; height: 50px; border-radius: 100px; display: flex; justify-content: center; align-items: center; }
 .header .header-body .welcome-message .header-button .icon-container img { width: 40%; height: auto; transform: translateX(14%); }
 .header .header-body .welcome-message .header-button span { padding: 0 16px; font-family: 'Hacen Tunisia Lt'; color: #FFF; font-size: 16px; }
-.header.rtl .header-body { direction: rtl }
-.header.rtl .header-body .welcome-message h1 { text-align: right; }
-.header.rtl .header-body .welcome-message p { text-align: right }
-.header.rtl .header-body .mockup { padding-right: 16%; }
-.header.rtl .header-body .mockup .markets img { margin-left: 30px; margin-right: 0 }
-.header.rtl .header-body .mockup .markets img:last-of-type { margin-right: 0; margin-left: 0; }
+body.rtl .header .header-body { direction: rtl }
+body.rtl .header .header-body .welcome-message h1 { text-align: right; }
+body.rtl .header .header-body .welcome-message p { text-align: right }
+body.rtl .header .header-body .mockup { padding-right: 16%; }
+body.rtl .header .header-body .mockup .markets img { margin-left: 30px; margin-right: 0 }
+body.rtl .header .header-body .mockup .markets img:last-of-type { margin-right: 0; margin-left: 0; }
 
 
 /* Sticky header */
@@ -51,8 +54,8 @@
 .sticky-header .top-nav .menu-side .menu li span { color: #14ACE3; text-shadow: 0 0 2px rgba(0, 0, 0, .15); }
 .sticky-header .top-nav .menu-side .menu li.active span::before { background: #B4E85E }
 .sticky-header .top-nav .menu-side .menu li.active:hover span::before { width: calc(90% + 15px); }
-.sticky-header.rtl .top-nav .menu-side .menu li { margin-left: 30px; margin-right: 0 }
-.sticky-header.rtl .top-nav .menu-side .menu li:last-of-type { margin-right: 0; margin-left: 0 }
+body.rtl .sticky-header .top-nav .menu-side .menu li { margin-left: 30px; margin-right: 0 }
+body.rtl .sticky-header .top-nav .menu-side .menu li:last-of-type { margin-right: 0; margin-left: 0 }
 
 .sticky-header { margin-bottom: 80px }
 .sticky-header .header-body { padding-bottom: 0 }

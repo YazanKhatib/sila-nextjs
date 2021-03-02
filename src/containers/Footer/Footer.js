@@ -43,6 +43,11 @@ export default function Footer() {
     const setLanguage = (key) => {
         i18n.changeLanguage(key);
         localStorage.setItem('lang', key);
+        if(key === 'ar'){
+            window.document.body.classList.add('rtl')
+        }else{
+            window.document.body.classList.remove('rtl')
+        }
     }
 
     return (

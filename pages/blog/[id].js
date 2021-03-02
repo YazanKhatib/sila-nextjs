@@ -16,11 +16,11 @@ export default function NewsSingle() {
 
     const breadcrumbs = [
         {
-            title: 'الصفحة الرئيسية',
+            title: t('public.menu.home'),
             onPress: () => {}
         },
         {
-            title: 'الأخبار',
+            title: t('public.menu.blog'),
             onPress: () => {}
         }
     ]

@@ -1,7 +1,3 @@
-// redux toolkit
-import { Provider } from 'react-redux'
-import store from "../src/services/store/store"
-
 // Stylesheet
 import '../src/assets/css/main.css'
 import '../src/assets/css/ionicons.min.css'
@@ -25,5 +21,5 @@ import '../src/components/Card/NewsCard/NewsCard.css'
 import '../src/languages/i18n'
 
 export default function MyApp({ Component, pageProps }) {
-    return <Provider store={store}><Component {...pageProps} /></Provider>
+    return <Component {...pageProps} />
 }

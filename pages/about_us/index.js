@@ -27,11 +27,11 @@ export default function Blog() {
 
     const breadcrumbs = [
         {
-            title: 'الصفحة الرئيسية',
+            title: t('public.menu.home'),
             onPress: () => {}
         },
         {
-            title: 'تعرف علينا',
+            title: t('public.menu.about_us'),
             onPress: () => {}
         }
     ]
@@ -70,11 +70,8 @@ export default function Blog() {
             <div className={'content-container'}>
                 <section className={'about-us'}>
                     <div className={'about-us-info'}>
-                        <h2>تعرف علينا</h2>
-                        <p> صلة هي اول شبكة طبية الكترونية في سوريا هدفنا تسهيل العملية الرعاية الصحية وتقديم الخدمات بشكل متكامل عن طريق تشبيك مع العديد من الأطباء المختصين والمشافي ومراكز
-                            التحليل والاشعة والصيدليات.</p>
-                        <p>حن نقدم أفضل الخدمات بطريقة مميزة تجعل صحتك وصحة عائلتك بأمان من خلال المتابعة اليومية وإمكانية جلب ممرض الى المنزل في حالات الطارئة  وخدمة البحث الالكترونية وحجز المواعيد الالكترونية ايضاً وطرح أفضل المقالات الطبية الهامة  التي تخصك انت وعائلتك.
-                        </p>
+                        <h2>{t('public.about_us.management_team.title')}</h2>
+                        <p>{t('public.about_us.management_team.description')}</p>
                     </div>
 
                     <div className={'images'}>
@@ -95,12 +92,11 @@ export default function Blog() {
                                 <img src={mission} alt=""/>
                             </div>
 
-                            <h3>أهدافنا</h3>
+                            <h3>{t('public.about_us.vision_mission.message.title')}</h3>
                         </div>
 
                         <div className={'item-content'}>
-                            <p> صلة هي اول شبكة طبية الكترونية في سوريا هدفنا تسهيل العملية الرعاية الصحية وتقديم الخدمات بشكل متكامل عن طريق تشبيك مع العديد من الأطباء المختصين والمشافي ومراكز
-                                التحليل والاشعة والصيدليات.</p>
+                            <p>{t('public.about_us.vision_mission.message.description')}</p>
                         </div>
                     </div>
 
@@ -112,12 +108,11 @@ export default function Blog() {
                                 <img src={mission} alt=""/>
                             </div>
 
-                            <h3>رؤيتنا</h3>
+                            <h3>{t('public.about_us.vision_mission.vision.title')}</h3>
                         </div>
 
                         <div className={'item-content'}>
-                            <p> صلة هي اول شبكة طبية الكترونية في سوريا هدفنا تسهيل العملية الرعاية الصحية وتقديم الخدمات بشكل متكامل عن طريق تشبيك مع العديد من الأطباء المختصين والمشافي ومراكز
-                                التحليل والاشعة والصيدليات.</p>
+                            <p>{t('public.about_us.vision_mission.message.description')}</p>
                         </div>
                     </div>
 
@@ -126,7 +121,7 @@ export default function Blog() {
 
                 <section className={'team-members'}>
                     <div className={'section-title'}>
-                        <h1>فريق صِلَة</h1>
+                        <h1>{t('public.about_us.sila_team.title')}</h1>
                     </div>
 
                     <div className={'section-content'}>
@@ -139,8 +134,8 @@ export default function Blog() {
                                 </div>
 
                                 <div className={'item-info'}>
-                                    <h6>عدي الشامي</h6>
-                                    <span>مؤسس شبكة صلة</span>
+                                    <h6>{t('public.about_us.sila_team.team.1.name')}</h6>
+                                    <span>{t('public.about_us.sila_team.team.1.position')}</span>
                                 </div>
                             </div>
 
@@ -152,8 +147,34 @@ export default function Blog() {
                                 </div>
 
                                 <div className={'item-info'}>
-                                    <h6>أحمد خالد</h6>
-                                    <span>شريك مؤسس</span>
+                                    <h6>{t('public.about_us.sila_team.team.2.name')}</h6>
+                                    <span>{t('public.about_us.sila_team.team.2.position')}</span>
+                                </div>
+                            </div>
+
+                            <div className={'item'}>
+                                <div className={'thumbnail-outer-container'}>
+                                    <img className={'hidden-image'} src={member_3} title="" alt=""/>
+                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_3})` }} />
+                                    <div className={'overlay'} />
+                                </div>
+
+                                <div className={'item-info'}>
+                                    <h6>{t('public.about_us.sila_team.team.3.name')}</h6>
+                                    <span>{t('public.about_us.sila_team.team.3.position')}</span>
+                                </div>
+                            </div>
+
+                            <div className={'item'}>
+                                <div className={'thumbnail-outer-container'}>
+                                    <img className={'hidden-image'} src={member_3} title="" alt=""/>
+                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_3})` }} />
+                                    <div className={'overlay'} />
+                                </div>
+
+                                <div className={'item-info'}>
+                                    <h6>{t('public.about_us.sila_team.team.4.name')}</h6>
+                                    <span>{t('public.about_us.sila_team.team.4.position')}</span>
                                 </div>
                             </div>
 
@@ -165,8 +186,21 @@ export default function Blog() {
                                 </div>
 
                                 <div className={'item-info'}>
-                                    <h6>هلا عبيدي</h6>
-                                    <span>مسؤولة التسويق</span>
+                                    <h6>{t('public.about_us.sila_team.team.5.name')}</h6>
+                                    <span>{t('public.about_us.sila_team.team.5.position')}</span>
+                                </div>
+                            </div>
+
+                            <div className={'item'}>
+                                <div className={'thumbnail-outer-container'}>
+                                    <img className={'hidden-image'} src={member_2} title="" alt=""/>
+                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_2})` }} />
+                                    <div className={'overlay'} />
+                                </div>
+
+                                <div className={'item-info'}>
+                                    <h6>{t('public.about_us.sila_team.team.6.name')}</h6>
+                                    <span>{t('public.about_us.sila_team.team.6.position')}</span>
                                 </div>
                             </div>
                         </div>
@@ -175,49 +209,51 @@ export default function Blog() {
 
                 <section className={'privacy-policy'}>
                     <div className={'section-title'}>
-                        <h1>سياسة الخصوصية</h1>
-                        <p>معنا انت صرت بأمان ولانو نحن بهمنا أمانك قام فريق صلة الطبي بالحفاظ على سرية بياناتك الشخصية</p>
+                        <h1>{t('public.about_us.privacy_policy.title')}</h1>
+                        <p>{t('public.about_us.privacy_policy.description')}</p>
                     </div>
 
                     <div className={'section-content'}>
                         <div className={'terms'}>
                             <div className={'item'}>
-                                <div className={'icon'}>
-                                    <i className="ion-checkmark-round" aria-hidden="true" />
-                                </div>
-
-                                <p>المسح الأولي والمنتظم لمكافحة الفيروسات للمستندات التي تم تحميلها ومراقبة النظام في حال اكتشاف أي نشاط مشبوه</p>
-
+                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
+                                <p>{t('public.about_us.privacy_policy.items.1')}</p>
                                 <div className={'clear'} />
                             </div>
 
                             <div className={'item'}>
-                                <div className={'icon'}>
-                                    <i className="ion-checkmark-round" aria-hidden="true" />
-                                </div>
-
-                                <p>جميع البيانات والمعلومات التي يتم جمعها عن المرضى والأطباء محمية بشكل كامل ولا يمكن اختراقها.</p>
-
+                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
+                                <p>{t('public.about_us.privacy_policy.items.2')}</p>
                                 <div className={'clear'} />
                             </div>
 
                             <div className={'item'}>
-                                <div className={'icon'}>
-                                    <i className="ion-checkmark-round" aria-hidden="true" />
-                                </div>
-
-                                <p>نؤمن لك حماية سجلك الطبي ولا يمكن لأحد معرفة معلوماتك وحالتك الصحية غير طبيبك المختص.</p>
-
+                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
+                                <p>{t('public.about_us.privacy_policy.items.3')}</p>
                                 <div className={'clear'} />
                             </div>
 
                             <div className={'item'}>
-                                <div className={'icon'}>
-                                    <i className="ion-checkmark-round" aria-hidden="true" />
-                                </div>
+                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
+                                <p>{t('public.about_us.privacy_policy.items.4')}</p>
+                                <div className={'clear'} />
+                            </div>
 
-                                <p>نظام حماية لمنع الوصول غير المصرح به (شبكات مشابها \هكر)</p>
+                            <div className={'item'}>
+                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
+                                <p>{t('public.about_us.privacy_policy.items.5')}</p>
+                                <div className={'clear'} />
+                            </div>
 
+                            <div className={'item'}>
+                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
+                                <p>{t('public.about_us.privacy_policy.items.6')}</p>
+                                <div className={'clear'} />
+                            </div>
+
+                            <div className={'item'}>
+                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
+                                <p>{t('public.about_us.privacy_policy.items.7')}</p>
                                 <div className={'clear'} />
                             </div>
                         </div>
@@ -238,15 +274,15 @@ export default function Blog() {
                             <div className={'questions'}>
                                 {questions.map((item, index) => {
                                     return <div key={index} className={'item'}>
-                                        <div className={'item-title'} onClick={() => {setActiveQuestion(item.title == activeQuestion? '':item.title);}}>
+                                        <div className={'item-title'} onClick={() => {setActiveQuestion(item.title === activeQuestion? '': item.title);}}>
                                             <h6>{item.title}</h6>
 
-                                            <div className={'icon-container ' + (activeQuestion == item.title? 'active':'')}>
+                                            <div className={'icon-container ' + (activeQuestion === item.title? 'active':'')}>
                                                 <i className={'ion-plus-round'} aria-hidden="true" />
                                             </div>
                                         </div>
 
-                                        <div className={'item-description ' + (activeQuestion == item.title? 'active':'')}>
+                                        <div className={'item-description ' + (activeQuestion === item.title? 'active':'')}>
                                             <p>{item.description}</p>
                                         </div>
                                     </div>;

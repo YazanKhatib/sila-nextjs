@@ -16,6 +16,7 @@ const lang = typeof localStorage !== 'undefined' ? localStorage.getItem('lang') 
 let defaultLang = 'en'
 if (lang && lang === 'ar') {
     defaultLang = 'ar';
+    typeof window !== 'undefined' && window.document.body.classList.add('rtl')
 }
 
 i18n.use(Backend)
