@@ -1,8 +1,35 @@
-.page-container .content-container .questions .items ul li { display: flex; margin-bottom: 14px; }
+.page-container .content-container .questions .items ul li { display: flex; margin-bottom: 10px; }
 .page-container .content-container .questions .items ul li:last-of-type { margin-bottom: 0 }
 .page-container .content-container .questions .items ul li .dot { margin-top: 5px; height: 12px; width: 12px; background: #05A5E1; border-radius: 100px; margin-right: 18px; }
 .page-container .content-container .questions .items ul li p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: left; font-weight: 200; }
+.page-container .content-container .questions .items p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: left; font-weight: 200; }
+.page-container .content-container .questions .items > * { margin-bottom: 6px; }
 body.rtl .page-container .content-container .questions .items ul { direction: rtl; }
 body.rtl .page-container .content-container .questions .items ul li .dot { margin-left: 18px; margin-right: 0 }
 body.rtl .page-container .content-container .questions .items ul li p { text-align: right; }
+body.rtl .page-container .content-container .questions .items p { text-align: right; }
 
+
+/*
+    ============
+     Responsive
+    ============
+*/
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+    .page-container .content-container .questions .items .item .item-description ul li .dot { height: 10px; width: 10px; }
+}
+
+@media (max-width: 768px) {
+    .page-container .content-container .questions .items ul li p { font-size: 17px; }
+    .page-container .content-container .questions .items p { font-size: 17px; }
+    .page-container .content-container .questions .items ul li .dot { height: 8px; width: 8px; }
+}
+
+@media ( orientation: portrait ) {
+}
+
+@media (max-width: 500px) {
+}

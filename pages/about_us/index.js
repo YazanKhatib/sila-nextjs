@@ -1,6 +1,9 @@
 // React Basic
 import React, {useState} from 'react'
 
+// Lib
+import { useMediaQuery } from 'react-responsive'
+
 // Assets
 import about_1 from '../../src/assets/images/about_us/about_1.png'
 import about_2 from '../../src/assets/images/about_us/about_2.png'
@@ -24,6 +27,8 @@ export default function Blog() {
     const { i18n, t } = useTranslation();
 
     const [activeQuestion, setActiveQuestion] = useState('');
+
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
     const breadcrumbs = [
         {
@@ -64,8 +69,8 @@ export default function Blog() {
     ]
 
     return (
-        <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
-            <StickyHeader activeItem={'about_us'} breadcrumbs={breadcrumbs} title={'تعرف علينا'} />
+        <div className={'page-container'}>
+            <StickyHeader breadcrumbs={breadcrumbs} title={t('public.menu.about_us')} />
 
             <div className={'content-container'}>
                 <section className={'about-us'}>
@@ -85,7 +90,6 @@ export default function Blog() {
 
                 <section className={'vision-mission'}>
                     <div />
-
                     <div className={'item'}>
                         <div className={'title-icon'}>
                             <div className={'icon-container'}>
@@ -99,9 +103,7 @@ export default function Blog() {
                             <p>{t('public.about_us.vision_mission.message.description')}</p>
                         </div>
                     </div>
-
                     <div />
-
                     <div className={'item'}>
                         <div className={'title-icon'}>
                             <div className={'icon-container'}>
@@ -112,10 +114,9 @@ export default function Blog() {
                         </div>
 
                         <div className={'item-content'}>
-                            <p>{t('public.about_us.vision_mission.message.description')}</p>
+                            <p>{t('public.about_us.vision_mission.vision.description')}</p>
                         </div>
                     </div>
-
                     <div />
                 </section>
 
@@ -250,52 +251,46 @@ export default function Blog() {
                                 <p>{t('public.about_us.privacy_policy.items.6')}</p>
                                 <div className={'clear'} />
                             </div>
-
-                            <div className={'item'}>
-                                <div className={'icon'}><i className="ion-checkmark-round" aria-hidden="true" /></div>
-                                <p>{t('public.about_us.privacy_policy.items.7')}</p>
-                                <div className={'clear'} />
-                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section className={'frequently-questions'}>
-                    <div className={'section-title'}>
-                        <h1>الأسئلة الشائعة</h1>
-                    </div>
+                {/*<section className={'frequently-questions'}>*/}
+                {/*    <div className={'section-title'}>*/}
+                {/*        <h1>الأسئلة الشائعة</h1>*/}
+                {/*    </div>*/}
 
-                    <div className={'section-content'}>
-                        <div className={'questions-image'}>
-                            <div className={'image'}>
-                                <img src={about_3} alt=""/>
-                            </div>
+                {/*    <div className={'section-content'}>*/}
+                {/*        <div className={'questions-image'}>*/}
+                {/*            <div className={'image'}>*/}
+                {/*                <img src={about_3} alt=""/>*/}
+                {/*            </div>*/}
 
-                            <div className={'questions'}>
-                                {questions.map((item, index) => {
-                                    return <div key={index} className={'item'}>
-                                        <div className={'item-title'} onClick={() => {setActiveQuestion(item.title === activeQuestion? '': item.title);}}>
-                                            <h6>{item.title}</h6>
+                {/*            <div className={'questions'}>*/}
+                {/*                {questions.map((item, index) => {*/}
+                {/*                    return <div key={index} className={'item'}>*/}
+                {/*                        <div className={'item-title'} onClick={() => {setActiveQuestion(item.title === activeQuestion? '': item.title);}}>*/}
+                {/*                            <h6>{item.title}</h6>*/}
 
-                                            <div className={'icon-container ' + (activeQuestion === item.title? 'active':'')}>
-                                                <i className={'ion-plus-round'} aria-hidden="true" />
-                                            </div>
-                                        </div>
+                {/*                            <div className={'icon-container ' + (activeQuestion === item.title? 'active':'')}>*/}
+                {/*                                <i className={'ion-plus-round'} aria-hidden="true" />*/}
+                {/*                            </div>*/}
+                {/*                        </div>*/}
 
-                                        <div className={'item-description ' + (activeQuestion === item.title? 'active':'')}>
-                                            <p>{item.description}</p>
-                                        </div>
-                                    </div>;
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/*                        <div className={'item-description ' + (activeQuestion === item.title? 'active':'')}>*/}
+                {/*                            <p>{item.description}</p>*/}
+                {/*                        </div>*/}
+                {/*                    </div>;*/}
+                {/*                })}*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
             </div>
 
             <section className={'map'}>
                 <div className="e-map">
-                    <iframe height="400" width="100%" src={"https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"><a href="https://www.maps.ie/create-google-map/">Google map generator</a></iframe>
+                    <iframe height={isTabletOrMobile? 260:400} width="100%" src={"https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"><a href="https://www.maps.ie/create-google-map/">Google map generator</a></iframe>
                 </div>
             </section>
 

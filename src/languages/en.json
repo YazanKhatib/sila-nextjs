@@ -7,16 +7,246 @@
       "about_us": "About Us",
       "blog": "Blog"
     },
+
+    "home": {
+      "header": {
+        "title": "All your medical information in one place",
+        "description": "Sila app is the best starting point for your medical journey, as it mainly works on managing and storing health data for you and your family members from the first day of their birth. Where you can save medical records, medical history, and any medical information and display it at any time in one place in order to improve the medical process",
+        "button": "Watch out video"
+      },
+      "features": {
+        "title": "Features",
+        "items": {
+          "1": {
+            "title": "For you and your family",
+            "description": "We strive to provide all medical information and developments and archive evidence periodically in cooperation with highly qualified doctors from all specialties to save time and effort on the medical staff and patients at the same time by providing an integrated electronic environment capable of finding medical and diagnostic solutions and prescribing drugs electronically"
+          },
+          "2": {
+            "title": "For health care specialists",
+            "description": "Optimizing the management of the medical process is a relatable goal, as it helps you manage all patient and client records, and handle appointments, whether through a smartphone or laptop"
+          }
+        }
+      },
+      "goals": {
+        "title": "Our Goals",
+        "items": {
+          "1": {
+            "title": "The Perfect Link",
+            "description": "by creating an electronic medical network that brings together all medical parties."
+          },
+          "2": {
+            "title": "A better medical process",
+            "description": "by improving the medical process, increasing its accuracy, and saving a lot of time and effort."
+          },
+          "3": {
+            "title": "Health community",
+            "description": "by make the app available for all the individuals in the community, and take care of their healthy status continuously."
+          },
+          "4": {
+            "title": "New Generation",
+            "description": "of health care using the most innovative medical strategies and modern technologies."
+          }
+        }
+      },
+      "latest_news": {
+        "title": "Latest news"
+      },
+      "partners": {
+        "title": "Our partners",
+        "description": "We are always excited to expand our business with more great partners"
+      }
+    },
+    "about_us": {
+      "management_team": {
+        "title": "We will always work on finding innovative solutions within the health sector",
+        "description": "It is true that your experience within the health sector has not become perfect, but we are working on it, and we will continue to put the patient's needs first. We simply believe that everyone deserves the best possible medical and health experience for your own safety and that of your families"
+      },
+      "vision_mission": {
+        "vision": {
+          "title": "Our Vision",
+          "description": "Our vision is to innovate to increase the health of the population and provide a dramatically improved health care system where caregivers and patients have electronic access to more complete and safer health records and enable them to make better health decisions"
+        },
+        "message": {
+          "title": "Our Message",
+          "description": "Reaching the health status of the community to the best extent by providing extremely caring health care at all levels"
+        }
+      },
+      "sila_team": {
+        "title": "Sila Team",
+        "team": {
+          "1": {
+            "name": "Abdullah Abdulhalim",
+            "position": "General Manager"
+          },
+          "2": {
+            "name": "Mohammad Hanana",
+            "position": "Research & Development Manager"
+          },
+          "3": {
+            "name": "Hasan Quaider",
+            "position": "Operations Manager"
+          },
+          "4": {
+            "name": "Qusai Hatahet",
+            "position": "Medical Marketing Manager"
+          },
+          "5": {
+            "name": "Aisha Akeed",
+            "position": "Medical Marketing Supervisor"
+          },
+          "6": {
+            "name": "Muaz Abdulhalim",
+            "position": "IT Manager"
+          }
+        }
+      },
+      "privacy_policy": {
+        "title": "Privacy policy",
+        "description": "with us, you will be always safe, and because your security is our priority, our team make sure that all your information are secured ",
+        "items": {
+          "1": "Sila app has been designed and built to make your health and personal information safe, protected from loss, and no medical personnel and healthcare professionals can access your information without your prior consent",
+          "2": "Your electronic medical record is created by your doctor with your consent and by providing your national number, and the username and password are determined through the application, and then the confirmation is via text message on your personal number",
+          "3": "Security system to prevent unauthorized access (similar networks / hackers)",
+          "4": "We provide you with the protection of your medical record, and no one can know your information and your health condition except for your specialist doctor",
+          "5": "Initial and regular anti-virus scanning of downloaded documents and monitoring the system in case any suspicious activity is detected",
+          "6": "All data and information collected about patients and doctors are fully protected and impenetrable"
+        }
+      }
+    },
+    "health_care_professionals": {
+      "items": {
+        "1": {
+          "title": "Doctors",
+          "items": {
+            "1": {
+              "title": "Electronic medical record",
+              "data": "Using Sila App, you can manage all your patients' records such as personal information, medical reports, medications, visit history, clinical notes, patient history, and other notes. In addition to storing and easily accessing files of various examination and pictures (x-rays, blood tests, and more) of your patients. You don't have to work on the app on your own but rather ask the nurses and aides within the clinic to work on the medical records of your patients. So, there is no need to dig further into the papers to know the past history of your patients, everything is readily available for your diagnosis."
+            },
+            "2": {
+              "title": "Request to consult another doctor",
+              "data": "In the event that you are a surgeon and you need to consult a cardiologist to know your patient’s ability to undergo surgery, you can send a consultation request through the application, whether to a specific doctor by you or a doctor chosen by the patient, and you can continue patient case during his consultation from the other doctor through The application."
+            },
+            "3": {
+              "title": "Daily monitoring of the patient's condition and vital signs",
+              "data": "With this feature, you can monitor the health status of your patients without coming to the clinic, and make sure of their vital indicators such as temperature - weight - pressure – blood sugar level and more also, on a daily basis (and more than once during the day) and continuously in order to make sure Of the stability of their condition and the progress of treatment."
+            },
+            "4": {
+              "title": "Comprehensive drug Index",
+              "data": "This feature is considered a pioneer in the medical field, and it will help you as a doctor in the field of health care, through an integrated and continuously updated drug catalog, which contains more than 18 thousand drugs. Sorted and categorized by name, scientific composition, manufacturer and many other search options."
+            },
+            "5": {
+              "title": "Electronic Prescription",
+              "data": "The electronic prescription is one of the main innovations in Sila network. It is a central feature that eliminates paper transactions and the common mistakes resulting from them. As a doctor, when you prescribe medication using the app, you do so electronically with the help of a prescription form provided by the app. Within the pharmacy, all that the patient needs is his national number or presenting the his national ID, and the pharmacist, in turn, enters the number through the application and dispenses the prescribed medicine to him. This feature allows the doctor to enter two alternatives to the prescribed drug in the event that the specified drug is not available."
+            },
+            "6": {
+              "title": "Laboratory analysis and electronic radiographs",
+              "data": ""
+            },
+            "7": {
+              "title": "Electronic search for a doctor",
+              "data": "through this feature, the user can search for doctors according to: specialty, location of the clinic, the ability to visit within the home, and many other search options."
+            },
+            "8": {
+              "title": "Electronic appointment",
+              "data": "to organize appointments within the clinic on a daily basis, according to the clinic’s working hours, which you specify as a doctor, such as days and working hours, and you can also amend appointments as a doctor in addition to acceptance and rejection, and all of this can also be done by the nurses or assistants within the clinic."
+            },
+            "9": {
+              "title": "Doctor accounts",
+              "data": "Being a doctor means your constant preoccupation and your need for an assistant or a nurse within the clinic, and therefore Sila has assigned to each doctor within the application two assistant accounts that have the ability to enter information and organize appointments, with the presence of a review feature by the doctor to ensure accuracy."
+            }
+          }
+        }
+      }
+    },
+    "for_you_and_your_family": {
+      "items": {
+        "1": {
+          "title": "Electronic Medical Record",
+          "items": {
+            "1": {"data": "When you have a medical record, you can view all of your medical records and your medical history, from any place and time. Even if you travel within the governorates. You can access your medical information from your mobile phone"},
+            "2": {"data": "Whether you are visiting a doctor for a medical examination, or in the event of an accident or sudden health accident and loss of consciousness, the health care providers can access your important health information:"},
+            "3": {
+              "data": {
+                "1": "General summary of the health status",
+                "2": "Blood type",
+                "3": "Chronic diseases",
+                "4": "Types of allergies",
+                "5": "Medicines that you take permanently or currently",
+                "6": "Medical conditions that have been previously diagnosed",
+                "7": "Medical consulting",
+                "8": "Medical tests that you have done"
+              }
+            },
+            "4": {"data": "In so doing, the medical record can help you get appropriate treatment. You do not need to be a patient to benefit from a medical record, but it is a convenient way to permanently record all of your medical information, and track it over time."}
+          }
+        },
+        "2": {
+          "title": "Daily Monitoring",
+          "items": {
+            "1": {"data": "Monitoring vital signs throughout the day allows the user and healthcare professionals to track the progress of a condition or treatment. Where the user takes readings, for example:"},
+            "2": {
+              "data": {
+                "1": "Blood pressure",
+                "2": "Blood Sugar Level",
+                "3": "Body Temperature",
+                "4": "Weight",
+                "5": "Height"
+              }
+            },
+            "3": {"data": "And many other vital signs of interest to the patient"},
+            "4": {"data": "Accordingly, Health Professionals can follow up medical cases, in order to be able to take general statistics, and accordingly, to make sure that the case or treatment is done in the best way, or that there is a need for modification."}
+          }
+        },
+        "3": {
+          "title": "Electronic Prescription",
+          "items": {
+            "1": {"data": "The electronic prescription is one of the major innovations in Sila network, as it is a central feature that eliminates paper transactions, and the common mistakes resulting from them. When a doctor prescribes a drug using the app, he does so electronically with the help of a prescription form provided by the app. Within the pharmacy, all that the patient needs is his national number or presenting his national ID for the pharmacist, and the pharmacist, in turn, enters the number through the application and dispenses the prescribed medicine to him. This feature allows the doctor to enter two alternatives to the prescribed drug in the event that the specified drug is not available."}
+          }
+        },
+        "4": {
+          "title": "Laboratory analyzes and electronic radiographs",
+          "items": {
+            "1": {"data": "Providing users with secure access to the results of their laboratory tests and their radiographs electronically, is one of the very important advantages provided by the Sila app, which stores the radiographs on the electronic medical record accurately and clearly and works to save a lot of time and effort for doctors and users. The doctor can prescribe medication and diagnose based on seeing the image and analyzes without returning the patient to the clinic again, except in case of necessity and asking the doctor. The application saves all the patient's radiographs and analyzes in his record so that he can return to them anytime and anywhere."}
+          }
+        },
+        "5": {
+          "title": "Comprehensive Drug Index",
+          "items": {
+            "1": {"data": "This feature is a pioneer in the medical field, and will assist healthcare professionals with a comprehensive and continuously updated Medicines Index that contains more than 18,000 drugs. Sorted and categorized by name, scientific composition, manufacturer and many other search options."}
+          }
+        },
+        "6": {
+          "title": "Find A Doctor",
+          "items": {
+            "1": {"data": "Where through this feature the user can search for a doctor according to: specialty, location of the clinic, the ability to visit within the home, and a lot of other search options, to find the right doctor for you and your family."}
+          }
+        },
+        "7": {
+          "title": "Electronic Appointment",
+          "items": {
+            "1": {"data": "This feature helps you book an appointment with the doctor you have chosen, and the doctor shows you the times when you can make an appointment to suit your time, and the application reminds you through notifications before your appointment with certain periods so that you do not forget your appointment."}
+          }
+        }
+      }
+    },
+
     "footer": {
       "privacy_policy": "Privacy Policy",
       "faq": "FAQ",
-      "copy_rights": "جميع الحقوق محفوظة لشبكة صلة الطبية 2021",
+      "copy_rights": "Copyright © 2021 Sila. All rights reserved.",
       "contact_us": "Contact Us",
       "contact_info": "Contact Info",
       "stay_toned": "Stay Toned",
       "email": "Email",
       "message": "Leave us a message",
-      "send": "Send"
+      "send": "Send",
+      "location": "سوريا - دمشق - المزرعة شارع أسامة بن زيد",
+      "footer_tag_line": "Sila is a new direction in the health care for you and your family, trust us and download sila app now"
+    },
+
+    "button": {
+      "primary_title_1": "Discover features now",
+      "secondary_title_1": "More features"
     }
   }
 }

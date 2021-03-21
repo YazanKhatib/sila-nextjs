@@ -1,1 +1,23 @@
 section .section-content .latest-news { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; direction: ltr; column-gap: 26px; row-gap: 26px; }
+body.rtl section .section-content .latest-news { direction: rtl }
+
+
+/*
+    ============
+     Responsive
+    ============
+*/
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+    section .section-content .latest-news { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+    section .section-content .latest-news { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 500px) {
+}

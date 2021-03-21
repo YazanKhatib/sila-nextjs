@@ -27,8 +27,8 @@ export default function Blog() {
     ]
 
     return (
-        <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
-            <StickyHeader activeItem={'blog'} breadcrumbs={breadcrumbs} title={'الأخبار'} />
+        <div className={'page-container'}>
+            <StickyHeader breadcrumbs={breadcrumbs} title={t('public.menu.blog')} />
 
             <div className={'content-container'}>
                 <section className={'news-section'} >

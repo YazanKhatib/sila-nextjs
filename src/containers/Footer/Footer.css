@@ -1,7 +1,6 @@
 footer { padding: 0 80px; background: #22203A }
 
 footer .top-side { display: grid; grid-template-columns: 1fr 2fr 1fr; grid-column-gap: 12px; padding-top: 50px; padding-bottom: 40px; border-bottom: .5px solid rgba(255, 255, 255, .2); }
-footer .top-side .logo-side {}
 footer .top-side .logo-side img { cursor: pointer; width: 150px; height: auto; margin-bottom: 10px }
 footer .top-side .logo-side p { color: #FFF; font-family: 'Hacen Tunisia Lt'; font-weight: 200; text-align: left; font-size: 17px; }
 footer .top-side .logo-side .markets { display: flex; margin-top: 30px; }
@@ -21,7 +20,6 @@ footer .top-side .contact-info-side .content .stay-toned ul { display: flex; }
 footer .top-side .contact-info-side .content .stay-toned ul li { color: #22203A; font-size: 16px; margin-right: 10px; width: 32px; height: 32px; border-radius: 100px; background: #FFF; display: flex; justify-content: center; align-items: center; cursor: pointer; }
 footer .top-side .contact-info-side .content .stay-toned ul li:last-of-type { margin-right: 0 }
 footer .top-side .contact-info-side .content .stay-toned ul li:hover { background: #05A5E1 }
-footer .top-side .contact-us-side {}
 footer .top-side .contact-us-side h5 { color: #05A5E1; font-family: 'Hacen Tunisia'; font-weight: 200; text-align: left; font-size: 20px; margin-bottom: 14px; }
 footer .top-side .contact-us-side form { font-size: 0 }
 footer .top-side .contact-us-side input, footer .top-side .contact-us-side textarea { outline: none; width: -webkit-fill-available; border: none; padding: 12px 10px; border-radius: 5px; margin-bottom: 12px; text-align: left; font: 200 16px 'Hacen Tunisia Lt'; color: #333; }
@@ -41,11 +39,11 @@ body.rtl footer .top-side .contact-us-side h5 { text-align: right; }
 body.rtl footer .top-side .contact-us-side input, body.rtl footer .top-side .contact-us-side textarea { text-align: right; }
 
 footer .bottom-side { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
-body.rtl footer .bottom-side { direction: rtl }
 footer .bottom-side div { color: #FFF; font-family: 'Hacen Tunisia Lt'; font-weight: 200; text-align: right; font-size: 18px; }
 footer .bottom-side .lang-privacy-common-questions { display: flex; align-items: center; justify-content: center }
 footer .bottom-side .lang-privacy-common-questions span { margin-right: 30px; cursor: pointer; }
 footer .bottom-side .lang-privacy-common-questions span:last-of-type { margin-right: 0 }
+body.rtl footer .bottom-side { direction: rtl }
 body.rtl footer .bottom-side .lang-privacy-common-questions span { margin-left: 30px; margin-right: 0; }
 body.rtl footer .bottom-side .lang-privacy-common-questions span:last-of-type { margin-left: 0; margin-right: 0; }
 
@@ -61,3 +59,69 @@ footer .languages-modal .model-inner-container ul { list-style: none; padding: 0
 footer .languages-modal .model-inner-container ul li { padding: 3px 0; font-family: 'Hacen Tunisia Lt'; text-align: center; line-height: 40px; cursor: pointer; border-bottom: 1px solid #EEE; font-size: 14px; color: #555; transition: all .3s ease; }
 footer .languages-modal .model-inner-container ul li:hover { background: #F1F1F1; }
 footer .languages-modal .model-inner-container ul li.active { color: #05A5E1; }
+
+
+/*
+    ============
+     Responsive
+    ============
+*/
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+    footer .top-side .logo-side img { width: 120px; }
+    footer .top-side .logo-side p { font-size: 16px; }
+    footer .top-side .logo-side .markets img { height: 38px; margin-right: 26px; }
+    footer .top-side .logo-side .markets img:last-of-type { margin-right: 0 }
+    body.rtl footer .top-side .logo-side .markets img { margin-left: 26px; margin-right: 0 }
+    body.rtl footer .top-side .logo-side .markets img:last-of-type { margin-right: 0; margin-left: 0; }
+
+    footer .top-side .contact-info-side .content .content-title { font-size: 19px; }
+    footer .top-side .contact-info-side .content .contact-info ul li .icon-container i { font-size: 18px; }
+    footer .top-side .contact-info-side .content .contact-info ul li span { font-size: 15px; }
+    footer .top-side .contact-info-side .content .stay-toned h5 { font-size: 17px; }
+    footer .top-side .contact-info-side .content .stay-toned ul li { width: 28px; height: 28px; }
+
+    footer .top-side .contact-us-side h5 { font-size: 19px; }
+    footer .top-side .contact-us-side input, footer .top-side .contact-us-side textarea { padding: 10px 8px; margin-bottom: 10px; font-size: 15px }
+    footer .top-side .contact-us-side button { padding: 8px 17px; font-size: 17px; }
+
+    footer .bottom-side { padding: 17px 0; }
+    footer .bottom-side div { font-size: 17px; }
+    footer .bottom-side .lang-privacy-common-questions span { margin-right: 26px; }
+    footer .bottom-side .lang-privacy-common-questions span:last-of-type { margin-right: 0 }
+    body.rtl footer .bottom-side .lang-privacy-common-questions span { margin-left: 26px; margin-right: 0; }
+    body.rtl footer .bottom-side .lang-privacy-common-questions span:last-of-type { margin-left: 0; margin-right: 0; }
+}
+
+@media ( orientation: portrait ) {
+    footer { padding: 0 60px; }
+}
+
+@media (max-width: 768px) {
+    footer { padding: 0 60px; }
+
+    footer .top-side { grid-template-columns: 1fr; grid-row-gap: 30px; }
+
+    footer .top-side .logo-side { text-align: center }
+    footer .top-side .logo-side p { text-align: center!important; }
+    footer .top-side .logo-side .markets { justify-content: center }
+
+    footer .top-side .contact-info-side .content .content-title { text-align: center!important; }
+    footer .top-side .contact-info-side .content .contact-info ul li { justify-content: center }
+    footer .top-side .contact-info-side .content .contact-info ul li .icon-container { margin-right: 10px; }
+    footer .top-side .contact-info-side .content .stay-toned h5 { text-align: center!important; }
+    footer .top-side .contact-info-side .content .stay-toned ul { justify-content: center; }
+    body.rtl footer .top-side .contact-info-side .content .contact-info ul li .icon-container { margin-right: 0; margin-left: 10px }
+
+    footer .top-side .contact-us-side h5 { text-align: center!important; }
+
+    footer .bottom-side { flex-direction: column }
+    footer .bottom-side .copy-right { margin-bottom: 10px; text-align: center }
+    footer .bottom-side div { font-size: 16px; }
+}
+
+@media (max-width: 500px) {
+    footer { padding: 0 40px; }
+}

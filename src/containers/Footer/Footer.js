@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import { useRouter } from 'next/router'
 
 // Assets
-import logo_white_theme from "../../assets/svg/logo/vertical_logo_dark_theme.png";
+import logo_white_theme from "../../assets/images/logo/vertical_logo_dark_theme.png";
 import market_1 from "../../assets/images/markets/market_1.png";
 import market_2 from "../../assets/images/markets/market_2.png";
 
@@ -55,8 +55,7 @@ export default function Footer() {
             <div className={'top-side ' + (i18n.language === 'ar'? 'rtl':'')}>
                 <div className={'logo-side'}>
                     <img src={logo_white_theme} alt="" onClick={() => {router.push('/')}}/>
-                    <p>صلة اتجاه جديد في الرعاية الصحية لك ولعائلتك
-                        كن على ثقة بنا وحمل تطبيق صلة الان</p>
+                    <p>{t('public.footer.footer_tag_line')}</p>
                     <div className={'markets'}>
                         <img src={market_2} alt=""/>
                         <img src={market_1} alt=""/>
@@ -71,7 +70,7 @@ export default function Footer() {
                             <ul>
                                 <li><div className={'icon-container'}><i className="ion-android-call" aria-hidden="true" /></div><span>+963-997-798-554</span></li>
                                 <li><div className={'icon-container'}><i className="ion-android-mail" aria-hidden="true" /></div><span>info@sila.com</span></li>
-                                <li><div className={'icon-container'}><i className="ion-location" aria-hidden="true" /></div><span>سوريا - دمشق - المزرعة شارع أسامة بن زيد</span></li>
+                                <li><div className={'icon-container'}><i className="ion-location" aria-hidden="true" /></div><span>{t('public.footer.location')}</span></li>
                             </ul>
                         </div>
 
@@ -105,7 +104,7 @@ export default function Footer() {
 
             <div className={'bottom-side ' + (i18n.language === 'ar'? 'rtl':'')}>
                 <div className={'copy-right'}>
-                    <span>جميع الحقوق محفوظة لشبكة صلة الطبية 2021</span>
+                    <span>{t('public.footer.copy_rights')}</span>
                 </div>
 
                 <div className={'lang-privacy-common-questions'}>

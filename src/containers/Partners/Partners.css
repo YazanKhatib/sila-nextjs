@@ -1,1 +1,24 @@
-section .section-content .partners .item { cursor: pointer; float: right; width: 20%; display: flex; justify-content: center; align-items: center; padding: 20px 0; }
+section .section-content .partners .item { cursor: pointer; float: left; width: 20%; display: flex; justify-content: center; align-items: center; padding: 20px 0; }
+body.rtl section .section-content .partners .item { float: right; }
+
+
+/*
+    ============
+     Responsive
+    ============
+*/
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+    section .section-content .partners .item { width: calc(100% / 3) }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 500px) {
+    section .section-content .partners .item { width: 100% }
+}

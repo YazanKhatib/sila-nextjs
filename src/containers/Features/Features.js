@@ -31,7 +31,7 @@ export default function Features() {
 
                         <div className={'feature-content'}>
                             <p>{t('public.home.features.items.1.description')}</p>
-                            <Button title={t('public.button.primary_title_1')} blueButtonTitle={t('public.button.secondary_title_1')} style={{width: '40%'}}/>
+                            <Button title={t('public.button.primary_title_1')} blueButtonTitle={t('public.button.secondary_title_1')} style={{width: '50%'}}/>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@ export default function Features() {
 
                         <div className={'feature-content'}>
                             <p>{t('public.home.features.items.2.description')}</p>
-                            <Button title={t('public.button.primary_title_1')} blueButtonTitle={t('public.button.secondary_title_1')} style={{width: '40%'}}/>
+                            <Button title={t('public.button.primary_title_1')} blueButtonTitle={t('public.button.secondary_title_1')} style={{width: '50%'}}/>
                         </div>
                     </div>
                 </div>

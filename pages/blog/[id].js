@@ -26,8 +26,8 @@ export default function NewsSingle() {
     ]
 
     return (
-        <div className={'page-container ' + (i18n.language === 'ar'? 'rtl':'')}>
-            <StickyHeader activeItem={'blog'} breadcrumbs={breadcrumbs} title={'التأقلم مع احتياجات مريضك للرعاية الصحية'} />
+        <div className={'page-container'}>
+            <StickyHeader breadcrumbs={breadcrumbs} title={'التأقلم مع احتياجات مريضك للرعاية الصحية'} />
 
             <div className={'content-container'}>
                 <div className={'news-single'}>
@@ -93,7 +93,7 @@ export default function NewsSingle() {
                                         </div>
 
                                         <div className={'meta-data'}>
-                                            <h6>التأقلم مع احتياجات مريضك للرعاية الصحية</h6>
+                                            <h6>التلأقلم مع احتياجات مريضك للرعاية الصحية</h6>
                                             <span>ديسمبر 20-2020</span>
                                         </div>
                                     </div>

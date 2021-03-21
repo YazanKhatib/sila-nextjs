@@ -8,3 +8,31 @@
 .news-item .item-content .date { color: #C7C7C7; font-family: 'Hacen Tunisia'; font-weight: 200; text-align: center; font-size: 16px; margin-bottom: 10px; }
 .news-item .item-content h2 { color: #787878; font-family: 'Hacen Tunisia'; font-weight: bold; text-align: center; font-size: 27px; margin-bottom: 10px; }
 .news-item .item-content p { font-family: 'Hacen Tunisia Lt'; color: #535252; font-size: 18px; text-align: center; font-weight: 400; }
+
+
+/*
+    ============
+     Responsive
+    ============
+*/
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+    .news-item .item-content .date { font-size: 15px; margin-bottom: 8px; }
+    .news-item .item-content h2 { font-size: 25px; }
+    .news-item .item-content p { font-size: 17px; }
+}
+
+@media (max-width: 768px) {
+    .news-item .thumbnail-outer-container { height: 188px; }
+    .news-item .item-content { padding: 30px 25px; }
+    .news-item .item-content .date { font-size: 15px; margin-bottom: 8px; }
+    .news-item .item-content h2 { font-size: 21px; }
+    .news-item .item-content p { font-size: 15px; }
+}
+
+@media (max-width: 500px) {
+
+}

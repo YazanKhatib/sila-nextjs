@@ -29,5 +29,4 @@ i18n.use(Backend)
         interpolation: { escapeValue: false}
     });
 
-
 export default i18n;

@@ -31,7 +31,7 @@ export default function Goals() {
     return (
         <section className={'features-section'}>
             <div className={'section-title'}>
-                <h1>{t('public.home.goals.title')}</h1>
+                <h1 style={{ marginBottom: 56 }}>{t('public.home.goals.title')}</h1>
             </div>
 
             <div className={'section-content'}>
