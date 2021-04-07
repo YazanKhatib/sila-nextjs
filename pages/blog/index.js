@@ -28,7 +28,7 @@ export default function Blog() {
 
     const WEBAPI = new API()
 
-    let limit = 9;
+    let limit = 1;
 
     const router = useRouter();
 
@@ -47,7 +47,7 @@ export default function Blog() {
 
     useEffect(() => {
         getData();
-    }, [])
+    }, [page])
 
     const refresh = () => {
         getData()
@@ -93,11 +93,11 @@ export default function Blog() {
                     <div className={'pagination'}>
                         <div className={'inner-container'}>
                             <ul>
-                                <li className={'prev'} onClick={() => { if(page > 0){setPage(page-1); refresh()} }}><img src={arrow} alt=""/></li>
+                                <li className={'prev'} onClick={() => { if(page > 0){setPage(page-1);} }}><img src={arrow} alt=""/></li>
                                 { Array(totalPages).fill(0).map((item, index) => {
-                                    return <li onClick={() => { if(index !== page){setPage(index); refresh()} }} className={index === page? 'active':''} key={index}><span>{index+1}</span></li>
+                                    return <li onClick={() => { if(index !== page){setPage(index);} }} className={index === page? 'active':''} key={index}><span>{index+1}</span></li>
                                 }) }
-                                <li className={'next'} onClick={() => { if(page+1 < totalPages){setPage(page+1); refresh()} }}><img src={arrow} alt=""/></li>
+                                <li className={'next'} onClick={() => { if(page+1 < totalPages){setPage(page+1);} }}><img src={arrow} alt=""/></li>
                             </ul>
                         </div>
                     </div>

@@ -1,6 +1,8 @@
 .page-container .content-container .news-section { margin-bottom: 0 }
 .page-container .content-container .news-section .news { margin-bottom: 60px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; column-gap: 26px; row-gap: 26px; }
-.page-container .content-container .news-section .pagination { margin-bottom: 80px; width: 100%; }
+body.rtl .page-container .content-container .news-section .news { direction: rtl }
+
+.page-container .content-container .news-section .pagination { margin-bottom: 60px; width: 100%; }
 .page-container .content-container .news-section .pagination .inner-container { display: flex; justify-content: center; }
 .page-container .content-container .news-section .pagination .inner-container ul { display: flex; justify-content: center; align-items: center; }
 .page-container .content-container .news-section .pagination .inner-container ul li { transition: all .3s ease-in-out; cursor: pointer; margin-right: 10px; height: 40px; width: 40px; background: transparent; border-radius: 100px; display: flex; justify-content: center; align-items: center; }
@@ -12,11 +14,7 @@
 .page-container .content-container .news-section .pagination .inner-container ul li:hover span { color: #FFF; }
 .page-container .content-container .news-section .pagination .inner-container ul li img { width: 40%; height: auto }
 .page-container .content-container .news-section .pagination .inner-container ul li.next img { transform: rotate(180deg) }
-body.rtl .page-container .content-container .news-section .news { direction: rtl }
-body.rtl .page-container .content-container .news-section .pagination .inner-container ul { direction: rtl }
-body.rtl .page-container .content-container .news-section .pagination .inner-container ul li.next img { transform: rotate(0) }
-body.rtl .page-container .content-container .news-section .pagination .inner-container ul li.prev img { transform: rotate(180deg) }
-
+body.rtl .page-container .content-container .news-section .pagination .inner-container ul { direction: rtl; flex-direction: row-reverse; }
 
 /* News Single */
 .page-container .content-container .news-single { margin-bottom: 80px; display: grid; grid-template-columns: 3fr 1fr; grid-template-rows: auto; grid-column-gap: 30px; }
