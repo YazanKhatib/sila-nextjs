@@ -1,12 +1,9 @@
 // React Basic
 import React, {useState} from 'react'
+import {useRouter} from "next/router";
 
 // Assets
 import category_1 from '../../src/assets/images/categories/1.jpg'
-// import category_2 from '../../src/assets/images/categories/2.jpg'
-// import category_3 from '../../src/assets/images/categories/3.jpg'
-// import category_4 from '../../src/assets/images/categories/4.jpg'
-// import category_5 from '../../src/assets/images/categories/5.jpg'
 
 // Components
 
@@ -21,10 +18,12 @@ export default function ForYouAndYourFamily() {
 
     const { t } = useTranslation();
 
+    const router = useRouter();
+
     const breadcrumbs = [
         {
             title: t('public.menu.home'),
-            onPress: () => {}
+            onPress: () => {router.replace('/')}
         },
         {
             title: t('public.menu.for_you_and_your_family'),

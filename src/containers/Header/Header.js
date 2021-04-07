@@ -219,7 +219,7 @@ export function StickyHeader(props) {
                             <div className={'breadcrumbs'}>
                                 <ul>
                                     {props.breadcrumbs.map((item, index) => {
-                                        return <li key={index}><span>{item.title}</span> {props.breadcrumbs.length > (index+1)? <span className={'sep'}>/</span>:<></> }</li>
+                                        return <li onClick={item.onPress} key={index}><span>{item.title}</span> {props.breadcrumbs.length > (index+1)? <span className={'sep'}>/</span>:<></> }</li>
                                     })}
                                 </ul>
                             </div>

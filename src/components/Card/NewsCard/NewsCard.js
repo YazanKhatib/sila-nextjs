@@ -2,31 +2,40 @@
 import { useRouter } from 'next/router'
 
 // Assets
-import news_1 from '../../../assets/images/news/news_1.jpg'
 
 // Components
 import Button from "../../Button/Button";
 
+// Lang
+import { useTranslation } from 'react-i18next';
+
+// Services
+import { URL } from "../../../services/api/api"
+
 export default function NewsCard(props) {
+
+    const { t, i18n } = useTranslation();
 
     const router = useRouter();
 
+    const getWords = (str, wordsNum = 6) => {
+        return !str ? '':str.toString().split(/\s+/).slice(0, wordsNum).join(" ") + (str.length > (wordsNum*9)? "...":"");
+    }
+
     return (
-        <div className={'news-item'} onClick={() => {router.push('/blog/1')}}>
+        <div className={'news-item'} onClick={() => {router.push(`/blog/${props.details.id}`)}}>
             <div className={'thumbnail-outer-container'}>
-                <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${news_1})` }} />
-
-                <img className={'hidden-image'} src={news_1} title="" alt=""/>
-
+                <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${URL}/${props.details.thumbnail.replace(/\\/g, "/")})` }} />
+                <img className={'hidden-image'} src={URL+'/'+props.details.thumbnail} title={props.details.title} alt={props.details.title}/>
                 <div className={'overlay'} />
             </div>
 
             <div className={'item-content'}>
                 <span className={'date'}>{props.details.date}</span>
-                <h2>{props.details.title}</h2>
-                <p>{props.details.description}</p>
+                <h2>{getWords(i18n.language === 'en'? props.details.title:props.details.title_ar)}</h2>
+                <p>{getWords(i18n.language === 'en'? props.details.description:props.details.description_ar, 11)}</p>
 
-                <Button title={'استكشف ميزاتك الآن'} blueButtonTitle={'قراءة المزيد'} style={{width: '50%'}} type={'jumping'}/>
+                <Button title={t('public.button.primary_title_1')} blueButtonTitle={t('public.button.secondary_title_2')} style={{width: '80%'}} type={'jumping'}/>
             </div>
         </div>
     );

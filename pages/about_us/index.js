@@ -1,5 +1,6 @@
 // React Basic
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import {useRouter} from "next/router";
 
 // Lib
 import { useMediaQuery } from 'react-responsive'
@@ -7,17 +8,17 @@ import { useMediaQuery } from 'react-responsive'
 // Assets
 import about_1 from '../../src/assets/images/about_us/about_1.png'
 import about_2 from '../../src/assets/images/about_us/about_2.png'
-import about_3 from '../../src/assets/images/about_us/about_3.png'
-import member_1 from '../../src/assets/images/about_us/team_1.png'
-import member_2 from '../../src/assets/images/about_us/team_2.png'
-import member_3 from '../../src/assets/images/about_us/team_3.png'
 import mission from '../../src/assets/svg/mission.svg'
 
 // Components
+import { PageLoader } from '../../src/components/Loader/Loader/LoginLoader'
 
 // Containers
 import {StickyHeader} from '../../src/containers/Header/Header'
 import Footer from '../../src/containers/Footer/Footer'
+
+// Services
+import API, { URL } from "../../src/services/api/api";
 
 // Lang
 import {useTranslation} from "react-i18next";
@@ -26,14 +27,40 @@ export default function Blog() {
 
     const { i18n, t } = useTranslation();
 
+    const router = useRouter();
+
     const [activeQuestion, setActiveQuestion] = useState('');
 
+    const [membersItems, setMembersItems] = useState([])
+    const [isMembersLoading, setIsMembersLoading] = useState(true)
+
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
+
+    const WEBAPI = new API()
+
+    let limit = 1000;
+
+    useEffect(() => {
+        getData();
+    }, [])
+
+    const getData = () => {
+        let query = {
+            'limit': limit,
+            'offset': 0
+        }
+
+        WEBAPI.partners().partners( query ).then( response => {
+            setIsMembersLoading(false)
+            setMembersItems(response.data.data.results)
+        }).catch(error => {
+        })
+    }
 
     const breadcrumbs = [
         {
             title: t('public.menu.home'),
-            onPress: () => {}
+            onPress: () => {router.replace('/')}
         },
         {
             title: t('public.menu.about_us'),
@@ -126,85 +153,24 @@ export default function Blog() {
                     </div>
 
                     <div className={'section-content'}>
-                        <div className={'members'}>
-                            <div className={'item'}>
-                                <div className={'thumbnail-outer-container'}>
-                                    <img className={'hidden-image'} src={member_3} title="" alt=""/>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_3})` }} />
-                                    <div className={'overlay'} />
-                                </div>
+                        {isMembersLoading? <PageLoader /> : <div className={'members'}>
+                            { membersItems.map((item, index) => {
+                                return <div key={index} className={'item'}>
+                                    <div className={'thumbnail-outer-container'}>
+                                        <img className={'hidden-image'} src={item['url']} title={item['name']} alt={item['name']}/>
+                                        <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${URL}/${item['url'].replace(/\\/g, "/")}` }} />
+                                        <div className={'overlay'} />
+                                    </div>
 
-                                <div className={'item-info'}>
-                                    <h6>{t('public.about_us.sila_team.team.1.name')}</h6>
-                                    <span>{t('public.about_us.sila_team.team.1.position')}</span>
+                                    <div className={'item-info'}>
+                                        <h6 className={'name'}>{i18n.language === 'en'? item['name']:item['name_ar']}</h6>
+                                        <span className={'bio'}>{i18n.language === 'en'? item['bio']:item['bio_ar']}</span>
+                                        <span className={'email'}>{item['email']}</span>
+                                        <span className={'number'}>{item['number']}</span>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className={'item'}>
-                                <div className={'thumbnail-outer-container'}>
-                                    <img className={'hidden-image'} src={member_2} title="" alt=""/>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_2})` }} />
-                                    <div className={'overlay'} />
-                                </div>
-
-                                <div className={'item-info'}>
-                                    <h6>{t('public.about_us.sila_team.team.2.name')}</h6>
-                                    <span>{t('public.about_us.sila_team.team.2.position')}</span>
-                                </div>
-                            </div>
-
-                            <div className={'item'}>
-                                <div className={'thumbnail-outer-container'}>
-                                    <img className={'hidden-image'} src={member_3} title="" alt=""/>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_3})` }} />
-                                    <div className={'overlay'} />
-                                </div>
-
-                                <div className={'item-info'}>
-                                    <h6>{t('public.about_us.sila_team.team.3.name')}</h6>
-                                    <span>{t('public.about_us.sila_team.team.3.position')}</span>
-                                </div>
-                            </div>
-
-                            <div className={'item'}>
-                                <div className={'thumbnail-outer-container'}>
-                                    <img className={'hidden-image'} src={member_3} title="" alt=""/>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_3})` }} />
-                                    <div className={'overlay'} />
-                                </div>
-
-                                <div className={'item-info'}>
-                                    <h6>{t('public.about_us.sila_team.team.4.name')}</h6>
-                                    <span>{t('public.about_us.sila_team.team.4.position')}</span>
-                                </div>
-                            </div>
-
-                            <div className={'item'}>
-                                <div className={'thumbnail-outer-container'}>
-                                    <img className={'hidden-image'} src={member_1} title="" alt=""/>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_1})` }} />
-                                    <div className={'overlay'} />
-                                </div>
-
-                                <div className={'item-info'}>
-                                    <h6>{t('public.about_us.sila_team.team.5.name')}</h6>
-                                    <span>{t('public.about_us.sila_team.team.5.position')}</span>
-                                </div>
-                            </div>
-
-                            <div className={'item'}>
-                                <div className={'thumbnail-outer-container'}>
-                                    <img className={'hidden-image'} src={member_2} title="" alt=""/>
-                                    <div className={'thumbnail-inner-container'} style={{ backgroundImage: `url(${member_2})` }} />
-                                    <div className={'overlay'} />
-                                </div>
-
-                                <div className={'item-info'}>
-                                    <h6>{t('public.about_us.sila_team.team.6.name')}</h6>
-                                    <span>{t('public.about_us.sila_team.team.6.position')}</span>
-                                </div>
-                            </div>
-                        </div>
+                            }) }
+                        </div>}
                     </div>
                 </section>
 

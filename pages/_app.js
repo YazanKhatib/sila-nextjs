@@ -16,6 +16,7 @@ import '../src/containers/Footer/Footer.css'
 
 import '../src/components/Button/Button.css'
 import '../src/components/Card/NewsCard/NewsCard.css'
+import '../src/components/Loader/Loader/Loader.css'
 
 // Lang
 import '../src/languages/i18n'

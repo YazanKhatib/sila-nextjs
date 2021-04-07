@@ -229,6 +229,10 @@
         }
       }
     },
+    "blog": {
+      "most_read": "الأكثر قراءة",
+      "tags": "التاغات"
+    },
 
     "footer": {
       "privacy_policy": "سياسة الخصوصية",
@@ -246,7 +250,10 @@
 
     "button": {
       "primary_title_1": "استكشف ميزاتك الآن",
-      "secondary_title_1": "المزيد من الميزات"
+      "secondary_title_1": "المزيد من الميزات",
+
+      "primary_title_2": "استكشف ميزاتك الآن",
+      "secondary_title_2": "قراءة المزيد"
     }
   }
 }

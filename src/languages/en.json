@@ -229,6 +229,10 @@
         }
       }
     },
+    "blog": {
+      "most_read": "Most read",
+      "tags": "Tags"
+    },
 
     "footer": {
       "privacy_policy": "Privacy Policy",
@@ -246,7 +250,10 @@
 
     "button": {
       "primary_title_1": "Discover features now",
-      "secondary_title_1": "More features"
+      "secondary_title_1": "More features",
+
+      "primary_title_2": "Discover features now",
+      "secondary_title_2": "Read more"
     }
   }
 }
