@@ -28,7 +28,7 @@ export default function Blog() {
 
     const WEBAPI = new API()
 
-    let limit = 1;
+    let limit = 9;
 
     const router = useRouter();
 
